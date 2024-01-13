@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <head>
+    <title>Flick</title>
+    <script src="script.js"></script>
+  </head>
+  <body>
+  <!-- <body onresize="handleResize()"> -->
+    <div id="sidebar">
+      <img
+        id="menu-button"
+        src="assets/hamburger-icon.svg"
+        onclick="changeMenu()"
+      />
+      <div id="sidebar-container">
+        <a href="https://flick-cp317.github.io/docs/index.html"><img src="assets/flick-logo.svg" alt="" /></a>
+        <div class="section">
+          <a class="section-header" href="#intro">1. Introduction</a>
+          <table class="subsections">
+            <tr>
+              <td><span class="subsection-num">1.1</span></td>
+              <td>
+                <a class="subsection-header" href="#intro-purpose">Purpose</a>
+              </td>
+            </tr>
+            <tr>
+              <td><span class="subsection-num">1.2</span></td>
+              <td>
+                <a class="subsection-header" href="#intro-scope">Scope</a>
+              </td>
+            </tr>
+            <tr>
+              <td><span class="subsection-num">1.3</span></td>
+              <td>
+                <a class="subsection-header" href="#intro-definitions"
+                  >Definitions, acronyms, and abbreviations</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td><span class="subsection-num">1.4</span></td>
+              <td>
+                <a class="subsection-header" href="#intro-references"
+                  >References</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td><span class="subsection-num">1.5</span></td>
+              <td>
+                <a class="subsection-header" href="#intro-overview">Overview</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="section">
+          <a class="section-header" href="#desc">2. Overall description</a>
+          <table class="subsections">
+            <tr>
+              <td><span class="subsection-num">2.1</span></td>
+              <td>
+                <a class="subsection-header" href="#desc-perspective"
+                  >Product perspective</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td><span class="subsection-num">2.2</span></td>
+              <td>
+                <a class="subsection-header" href="#desc-functions"
+                  >Product functions</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td><span class="subsection-num">2.3</span></td>
+              <td>
+                <a class="subsection-header" href="#desc-user"
+                  >User characteristics</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td><span class="subsection-num">2.4</span></td>
+              <td>
+                <a class="subsection-header" href="#desc-constraints"
+                  >Constraints</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td><span class="subsection-num">2.5</span></td>
+              <td>
+                <a class="subsection-header" href="#desc-assumptions"
+                  >Assumptions and dependencies</a
+                >
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="section">
+          <a class="section-header" href="#specific"
+            >3. Specific requirements</a
+          >
+          <table class="subsections">
+            <tr>
+              <td><span class="subsection-num">3.1</span></td>
+              <td>
+                <a class="subsection-header" href="#specific-interfaces"
+                  >External Interfaces</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td><span class="subsection-num">3.2</span></td>
+              <td>
+                <a class="subsection-header" href="#specific-functions"
+                  >Functions</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td><span class="subsection-num">3.3</span></td>
+              <td>
+                <a class="subsection-header" href="#specific-database"
+                  >Logical Database Requirements</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td><span class="subsection-num">3.4</span></td>
+              <td>
+                <a class="subsection-header" href="#specific-portability"
+                  >Portability</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td><span class="subsection-num">3.5</span></td>
+              <td>
+                <a class="subsection-header" href="#specific-data-dictionary"
+                  >Data Dictionary</a
+                >
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="section">
+          <a class="section-header" href="#appendix">Appendix</a>
+          <table class="subsections">
+            <tr>
+              <td><span class="subsection-num">4</span></td>
+              <td>
+                <a class="subsection-header" href="#appendix-version"
+                  >Version</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td><span class="subsection-num">5</span></td>
+              <td>
+                <a class="subsection-header" href="#appendix-authored"
+                  >Authored By</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td><span class="subsection-num">6</span></td>
+              <td>
+                <a class="subsection-header" href="#document-changes"
+                  >Document Changes</a
+                >
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div id="content">
+      <div id="content-container">
+        <h1 id="intro">1. Introduction</h1>
+        <div class="section-info">
+          <h2 id="intro-purpose">1.1 Purpose</h2>
+          <div class="subsection-info">
+            <p>
+              This document will outline all the necessary requirements of Flick and provide a detailed overview of the features and functionality of the service. The information provided is geared towards the interests of the end user and the working project team, who will utilize the document as a reference throughout the development of the platform. Given the bifurcation of the intended audience, the document will aim to be sufficiently detailed and simple, so as to be meaningful to all parties. 
+            </p>
+          </div>
+          <h2 id="intro-scope">1.2 Scope</h2>
+          <div class="subsection-info">
+            <p>
+              Flick is a web-based application designed to solve the age-long problem of picking a movie. The service will display movie titles, trailers, and descriptions, upon which users can swipe right (like) or swipe left (dislike) based on their interests. On the back-end, data will be collected on the habits and preferences of each individual and be applied to the database in order to refine the selection of movies displayed to the user, simplifying the selection process. The platform’s hallmark functionality is the formation of viewing groups, which will be referred to as “theatres”, in which the preferences of the individuals in the viewing audience are aggregated and used to display a list of movies of common interest to the group. If a movie of interest is not found, users will be prompted to continue swiping, updating the selection of films displayed to the theatre.
+            </p>
+          </div>
+          <h2 id="intro-definitions">
+            1.3 Definitions, acronyms, and abbreviations
+          </h2>
+          <h3>1.3.1 Acronyms and Abbreviations</h3>
+          <div class="subsection-info subsubsection">
+            <p>
+              <b>GUI:</b> Graphical User Interface <br />
+              <b>SRS:</b> Software Requirements Specification
+            </p>
+          </div>
+          <h3>1.3.2 Definitions</h3>
+          <div class="subsection-info subsubsection">
+            <p>
+              <b>Streaming Platform:</b> provides service to stream movies online <br />
+              <b>Theatre:</b> customizable groups of users - name and members are declared by users <br />
+              <b>Theatre Match:</b> a movie recommendation selected by all theatre members, that matches all members’ preferences <br />
+              <b>Front-end:</b> Presentation layer of the platform <br />
+              <b>Back-end:</b> Data access layer of the platform <br />
+
+            </p>
+          </div>
+          <h2 id="intro-references">1.4 References</h2>
+          <div class="subsection-info">
+            <p><a href="https://bohr.wlu.ca/cp317/notes/IEEE_830.pdf">
+              IEEE Recommended Practice for Software Requirements Specifications
+            </a></p>
+          </div>
+          <h2 id="intro-overview">1.5 Overview</h2>
+          <div class="subsection-info">
+            <p>
+              The remainder of this SRS document provides further detail on the overall functionality of the service, the technical specifications/requirements, and the user experience with Flick. This document should provide the reader with a high-level understanding of the service and serve as a general framework for interacting with the application. 
+            </p>
+          </div>
+        </div>
+        <br></br>
+        <h1 id="desc">2. Overall description</h1>
+        <div class="section-info">
+          <h2 id="desc-perspective">2.1 Product perspective</h2>
+          <div class="subsection-info">
+            <p>
+              Flick is a web-based application that uses React to create a front-end. It will utilize a manually created database that is based on a catalogue of various movies. A back-end database will also be used to enable user preference and movie organization.
+            </p>
+          </div>
+          <section id = "userInterface">
+          <h3>2.1.1 User Interface</h3>
+          <div class="subsection-info subsubsection">
+            <p>
+              Within the Flick web-app there are nine main user interfaces: login screen, sign-up screen, user profile section, movie selection, view theatres, theatre creations, invite/remove watchers and theatre renaming. When a user accesses the app, they will be shown the login/sign-up screen.
+              <br />
+              <br />
+              <b>Login:</b> The login menu will be displayed each time the application has been opened, containing an input box for both a username and password. The log-in page will also contain a button to create a new profile.
+              <br />
+              <br />
+              <b>Sign-up:</b> Users will be prompted to complete a form with username and password fields. A Submit button will be displayed at the bottom of the form.              
+              <br />
+              <br />
+              <b>User Profile:</b> The user profile will be created for each unique user that has created an account on Flick. Within their profile, users will have the ability to update their username. Users will be able to see all of their notifications within their user profile. Users will be notified of changes to theatre members and invitations to new theatres.
+              <br />
+              <br />
+              <b>Movie Selection:</b> Once the user has created their profile, they can begin swiping on the movies they like. Users will be presented with a movie on the screen based on their preferences, and they can either swipe left if they don’t want to watch the movie, or swipe right if they do. Swiping will be done by clicking on the respective buttons below the movie details. The user can continue swiping through movies until there is a common movie selected between their group.
+              <br />
+              <br />
+              <b>View Theatres:</b> Users will be able to view a list of all the theatres that they have joined and members within those theatres. When users click on a given theatre, they will also be able to view all matches within the theatre. They will also be able to create new theatres and add new members, which would prompt the theatre creation screen. Additionally, users can edit and leave theatres by opening a collapsed menu and selecting the corresponding option.
+              <br />
+              <br />
+              <b>Theatre Creation:</b> Users will be able to create their own theatres, including naming the group and adding in users to join. To add a new group member, users will search for the respective usernames in a search bar and select the desired user(s) to be added to the list.
+              <br />
+              <br />
+              <b>Invite/Remove Watchers:</b> Users will be able to invite or remove watchers to or from a given theatre.
+              <br />
+            </p>
+          </div>
+        </section>
+          <h3>2.1.2 Sample GUI</h3>
+          <div class="subsection-info">
+            <h3>UserLoginView</h3>
+            <img src="assets/user login view.PNG" class="mockup" />
+            
+            <br />
+
+            <h3>SignupView</h3>
+            <img src="assets/signup view.PNG" class="mockup" />
+            <br />
+
+            <h3>UserMovieView</h3>
+            <img src="assets/user movie view.png" class="mockup" />
+            
+            <br />
+
+            <h3>UserProfileView</h3>
+            <img src="assets/user profile view.png" class="mockup" />
+            <br />
+
+            <h3>UserTheatreView</h3>
+            <img src="assets/user theatre view.png" class="mockup" />
+
+            <br />
+
+            <h3>TheatreCreationView</h3>
+            <img src="assets/theatre creation view.png" class="mockup" />
+            <br />
+
+            <h3>TheatreInviteView</h3>
+            <img src="assets/theatre invite view.png" class="mockup" />
+            <br />
+          </div>
+        </div>
+          <h2 id="desc-functions">2.2 Product functions</h2>
+          <div class="subsection-info">
+            <p>
+              Flick provides the user with the ability to create a profile containing movie preferences, create theatres, and select movies that they would enjoy watching. Selection will occur by users 'liking' or 'disliking' a movie. Users will only see a single movie at a time during selection. Users will select movies based on their own preferences, which will be added to an individual list. The individual lists of all theatre members will be compiled and overlapping movies will be used for the theatre matches. In the theatre matches, theatre members will only be able to view movies that their theatre would like to watch (i.e. similar genres).
+            </p>
+          </div>
+          <section id = "userCharacteristics">
+          <h2 id="desc-user">2.3 User characteristics</h2>
+          <div class="subsection-info">
+            <p>
+              The intended audience are movie watchers that have access to
+              Streaming Platforms. Flick users can have any educational
+              background and should have the required technical expertise to be
+              able to navigate the basic functions of their browsers. Users who
+              have previous experience using the dating app Tinder will minimize
+              the amount of time spent needed to become familiar with Flick, as
+              the liking/disliking functions are similar.
+            </p>
+            <img src="assets/Flick - Use Cases UML.svg" alt="" width ="100%"/>
+            <div class="subsection-info subsubsection">
+              <p>
+                <b>2.3.1 Login - </b> Involves logging into the web application by entering a username and password.
+                <br />
+                <br />
+                <b>2.3.2 Sign-up - </b>  Involves creating a profile that requires the new user to create a username and password, resulting in a newly created user on the web application.
+                <br />
+                <br />
+                <b>2.3.3 Select Through Movies - </b> Involves selecting preferred movies by clicking the left button if you don't like the movie, and clicking the right button if you like the movie.
+                <br />
+                <br />
+                <b>2.3.4 View Theatres - </b> Involves selecting the "Your Theatres" button to view all theatres you've been added into.
+                <br />
+                <br />
+                <b>2.3.5 Create Theatre - </b> Involves selecting the "Create Theatres" button to create a new theatre group and naming the newly created theatre using a textbox.
+                <br />
+                <br />
+                <b>2.3.6 Add Watchers - </b> Involves selecting the "Your Theatres" button and selecting the "+" button beside the name of the specific theatre you would like to add watchers to. Users can be added by searching their username in the provided search bar and selecting the specific username to be added.
+                <br />
+                <br />
+                <b>2.3.7 View Theatre Matches - </b> Involves selecting the "Your Theatres" button, followed by selecting the name of the specified theatre you would like to view matches for, in order to see the common matches.
+                <br />
+                <br />
+                <b>2.3.8 View Notifications - </b> Involves opening the user profile page to view relevant theatre notifications. 
+               
+              </p>
+            </div>
+          </div>
+        </section>
+          <h2 id="desc-constraints">2.4 Constraints</h2>
+          <div class="subsection-info">
+            <p>
+              Flick requires a comprehensive list of movies available on various Streaming Platforms. This list will be stored on a manually created database, which requires time to build. Building the database will require a back-end function that will allow us to input the necessary movie data. As a result of funding concerns, the amount of movies that can be stored in a database and user information will be more limited. Additionally, as each user will make multiple requests to the database for movie suggestions, we may need to implement a delay to reduce request speeds and to compensate for simultaneous requests.
+            </p>
+          </div>
+          <h2 id="desc-assumptions">2.5 Assumptions and dependencies</h2>
+          <div class="subsection-info">
+            <p>
+              We assume the user will be able to connect to the internet while using the Flick app to successfully interact with the movie database. Another assumption is that users will be accessing Flick on a Chromium-based browser with JavaScript enabled to be compatible with all webapp functions. We are also going to assume that there are movies that exist to satisfy the preferences of all members in a created theatre. Finally, we assume that users are in external contact to physically view the movies and exchange user information to form a theatre.
+            </p>
+          </div>
+        </div>
+        <br></br>
+        <h1 id="specific">3. Specific requirements</h1>
+        <div class="section-info">
+          <h2 id="specific-interfaces">3.1 External Interfaces</h2>
+          <div class="subsection-info">
+            <p>
+              See sections <a href ="#userInterface">2.1.1</a> and <a href ="#userCharacteristics">2.3</a> where all inputs and outputs regarding external interfaces have been outlined.
+            </p>
+          </div>
+          <h2 id="specific-functions">3.2 Functions</h2>
+          <div class="subsection-info">
+            <p>
+              Upon a login attempt, the system will check if the username and password exist in the database. If the username or password is incorrect, the system will prompt the user to try again or to create an account if they do not already have one. When creating an account, the system checks if the username and password are valid and if the username is unique amongst existing usernames in the database. On the movie selection page, movies are pulled from the database and displayed to the user, filtered based on a movie genre preferences algorithm. The system will store all movies the user selects positively/negatively on in the database for the purposes of matching within theatres and ensuring that a user does not get repeatedly shown the same movie. The system also has the capability to check if a movie is commonly liked by all members of the user’s theatre. The theatre matches page will pull all the user’s theatres, theatre members, and commonly liked movies in theatres from the database and display it to the user. When creating a new theatre on the theatre creation page, the system checks if the theatre name is valid and if the usernames of the users they invite exist in the database. Users who receive theatre invites will updated as a member of the theatre in the database, which is displayed on the theatre matches page.
+            </p>
+          </div>
+          <h2 id="specific-database">3.3 Logical Database Requirements</h2>
+          <div class="subsection-info">
+            <p>
+              Our database will store information of users, theatres, records, notifications and movies. Users will have a username, password, list of genre preferences, list of liked movies, list of theatres they are a member of, and a list of notifications. Theatres will have a theatre name, list of members in the theatre, and a list of commonly liked movies by all members of the theatre. Movies will have a movie name, list of genres, and a description.
+            </p>
+          </div>
+          <h2 id="specific-portability">3.4 Portability</h2>
+          <div class="subsection-info">
+            <p>
+              We will develop a web-based application that will be accessible to Windows, macOS, and Linux users via web browser. 
+            </p>
+          </div>
+          <h2 id="specific-data-dictionary">3.5 Data Dictionary</h2>
+          <div class="subsection-info">
+              <a href="https://flick-cp317.github.io/docs/design.html#data-dictionary">Please see the project's complete data dictionary </a>
+              <div class="subsection-info">
+                <table class="content-table">
+              <tbody>
+                <tr>
+                  <th><b>Name</b></th>
+                  <th><b>Type</b></th>
+                  <th><b>Description</b></th>
+                </tr>
+                <tr>
+                  <td>Add Watchers</td>
+                  <td>Action</td>
+                  <td>Involves selecting the "Your Theatres" button and selecting the "+" button beside the name of the specific theatre you would like to add watchers to. Users can be added by searching their username in the provided search bar and selecting the specific username to be added.</td>
+                </tr>
+                <tr>
+                  <td>Create Theatre</td>
+                  <td>Action</td>
+                  <td>Involves selecting the "Create Theatres" button to create a new theatre group and naming the newly created theatre using a textbox.</td>
+                </tr>
+                <tr>
+                  <td>Login</td>
+                  <td>Action</td>
+                  <td>Involves logging into the web application by entering a username and password.</td>
+                </tr>
+                <tr>
+                  <td>Sign-up</td>
+                  <td>Action</td>
+                  <td>Involves creating a profile that requires the new user to create a username and password, resulting in a newly created user on the web application.</td>
+                </tr>
+                <tr>
+                  <td>Swipe through movies</td>
+                  <td>Action</td>
+                  <td>Involves selecting preferred movies by clicking the left button if you don't like the movie, and clicking the right button if you like the movie.</td>
+                </tr>
+                <tr>
+                  <td>View Notification</td>
+                  <td>Action</td>
+                  <td>Involves selecting the "Notifications" button to view relevant theatre notifications.</td>
+                </tr>
+                <tr>
+                  <td>View Theatres</td>
+                  <td>Action</td>
+                  <td>Involves selecting the "Your Theatres" button to view all theatres you've been added into.</td>
+                </tr>
+                <tr>
+                  <td>User</td>
+                  <td>-</td>
+                  <td>A user of Flick</td>
+                </tr>
+              </tbody>
+              </table>
+              </div>
+          </div>
+        </div>
+        <br></br>
+        <h1 id="appendix">Appendix</h1>
+        <div class="section-info">
+          <h2 id="appendix-version">4. Version</h2>
+          <h3>Version 0.1</h3>
+          <div class="subsection-info subsubsection">
+            <p>5/21/2021 [Sections 1,2,3] Initial Draft
+              <ul class="subsubsection">
+                <li>Alexander Dimitrakoudis (Section 1)</li>
+                <li>Mustafa Raza (Section 1)</li>
+                <li>Andrew Liutiev (Section 1)</li>
+                <li>Michael Veloso (Section 1)</li>
+                <li>Cassidy Huang (Section 2)</li>
+                <li>Lavisha Bugreja (Section 2)</li>
+                <li>Scott Baker  (Section 2)</li>
+                <li>Ya Jun Shao (Section 2)</li>
+                <li>Connor Kanalec (Section 3)</li>
+                <li>Tharssan Srikanthan (Section 3)</li>
+                <li>Harchit Bhatoia (Section 3)</li>
+                <li>Timothy Arsan (Section 3)</li>
+              </ul>
+              5/21/2021 [HTML] Initial Draft
+              <ul class="subsubsection">
+                <li>Andrew Maxwell</li>
+                <li>Amy Zhao</li>
+                <li>Matthew Dibble</li>
+                <li>Kara Kim</li>
+              </ul>
+            </p>
+          </div>
+          <h3>Version 0.2</h3>
+          <div class="subsection-info subsubsection">
+            <p>5/25/2021 [Sections 1,2,3] Revisions
+              <ul class="subsubsection">
+                <li>Alexander Dimitrakoudis (Section 1.1 - 1.5)</li>
+                <li>Cassidy Huang (Section 2.1 & 2.4)</li>
+                <li>Lavisha Bugreja (Section 2.1 & 2.4)</li>
+                <li>Scott Baker (Section 2.1 & 2.4)</li>
+                <li>Ya Jun Shao (Section 2.1 & 2.4)</li>
+                <li>Connor Kanalec (Section 3.2, 3.3, 3.6.5)</li>
+                <li>Tharssan Srikanthan (Section 3.2, 3.3, 3.6.5)</li>
+                <li>Harchit Bhatoia (Section 3.2, 3.3, 3.6.5)</li>
+                <li>Timothy Arsan (Section 3.2, 3.3, 3.6.5)</li>
+              </ul>
+              5/26/2021 [HTML] Data Entry and Styling
+              <ul class="subsubsection">
+                <li>Andrew Maxwell</li>
+                <li>Amy Zhao</li>
+                <li>Matthew Dibble</li>
+                <li>Kara Kim</li>
+              </ul>
+            </p>
+          </div>
+          <h3>Version 0.3</h3>
+          <div class="subsection-info subsubsection">
+            <p>5/27/2021 [Sections 1,2,3] SQA
+              <ul class="subsubsection">
+                <li>Amy Zhao</li>
+                <li>Andrew Maxwell</li>
+                <li>Kara Kim</li>
+                <li>Matthew Dibble</li>
+              </ul>
+              5/27/2021 [Sections 1,2,3] Final Revisions
+              <ul class="subsubsection">
+                <li>Alexander Dimitrakoudis</li>
+                <li>Cassidy Huang</li>
+                <li>Connor Kanalec</li>
+                <li>Lavisha Bugreja</li>
+                <li>Michael Veloso</li>
+                <li>Mustafa Raza</li>
+                <li>Scott Baker</li>
+                <li>Tharssan Srikanthan</li>
+                <li>Ya Jun Shao</li>
+              </ul>
+            </p>
+          </div>
+          <h3>Version 0.4</h3>
+          <div class="subsection-info subsubsection">
+            <p>6/03/2021 [Section 3] Minor Revision
+              <ul class="subsubsection">
+                <li>Amy Zhao</li>
+                <li>Kara Kim</li>
+              </ul>
+            </p>
+          </div>
+          <h3>Version 0.5</h3>
+          <div class="subsection-info subsubsection">
+            <p>8/02/2021 [Section 3] Final Back-End Revision
+              <ul class="subsubsection">
+                <li>Kara Kim</li>
+                <li>Matthew Dibble</li>
+                <li>Michael Veloso</li>
+                <li>Scott Baker</li>
+                <li>Alex Dimitrakoudis</li>
+              </ul>
+            </p>
+          </div>
+          <h3>Version 0.6</h3>
+          <div class="subsection-info subsubsection">
+            <p>8/07/2021 Front-End Adjustments to match implementation
+              <ul class="subsubsection">
+                <li>Amy Zhao</li>
+                <li>Andrew Maxwell</li>
+                <li>Cassidy Huang</li>
+                <li>Lavisha Bugreja</li>
+                <li>Tharssan Srikanthan</li>
+                <li>Ya Jun Shao</li>
+              </ul>
+            </p>
+          </div>
+          <h2 id="appendix-authored">5. Authored By</h2>
+          <div class="subsection-info subsubsection">
+              <ul class="subsubsection">
+                <li>Alexander Dimitrakoudis</li>
+                <li>Andrew Liutiev</li>
+                <li>Cassidy Huang</li>
+                <li>Connor Kanalec</li>
+                <li>Harchit Bhatoia</li>
+                <li>Lavisha Bugreja</li>
+                <li>Matthew Dibble</li>
+                <li>Michael Veloso</li>
+                <li>Mustafa Raza</li>
+                <li>Scott Baker</li>
+                <li>Tharssan Srikanthan</li>
+                <li>Timothy Arsan</li>
+                <li>Ya Jun Shao</li>
+              </ul>
+          </div>
+          <h2 id="document-changes">6. Document Changes</h2>
+          <div class="subsection-info">
+            <ul>
+              <li>1.4 References - added reference to IEEE Standard doc</li>
+              <li>2.1 Product Perspective - removed note about extending app to other streaming services (none were used due to time constraints and project being a proof of concept)</li>
+              <li>2.1.1 User Interface - updated descriptions of pages to reflect implementation</li>
+              <li>2.1.2 Sample GUI - Update image after css styling</li>
+              <li>2.3 User Characteristics&nbsp;</li>
+              <ul>
+              <li class="subsubsection">UML: removed Accept/Decline Invite actions from View Notifications</li>
+              <li class="subsubsection">Text: removed &lsquo;swiping&rsquo; action and updated other user actions to match interface</li>
+              </ul>
+              <li>3.2 Functions - removed &lsquo;swiping&rsquo; action and updated to match interface</li>
+              <li>3.5 Added Data Dictionary</li>
+              </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

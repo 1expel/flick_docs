@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+
+  <head>
+    <title>Flick</title>
+    <script src="script.js"></script>
+  </head>
+
+  <body>
+    <div id="sidebar">
+      <img
+        id="menu-button"
+        src="assets/hamburger-icon.svg"
+        onclick="changeMenu()"
+      />
+
+      <!-- Sidebar -->
+      <div id="sidebar-container">
+        <a href="https://flick-cp317.github.io/docs/index.html"
+          ><img src="assets/flick-logo.svg" alt=""
+        /></a>
+
+        <!-- 1. SQA -->
+        <div class="section">
+          <a class="section-header" href="#sqa">1. SQA Test Cases and Results</a>
+        </div>
+
+        <!-- 2. Version History -->
+        <div class="section">
+            <a class="section-header" href="#version-history">2. Version History</a>
+          </div>
+
+      </div>
+    </div>
+    <div id="content">
+      <div id="content-container">
+        <!-- 1. SQA -->
+        <h1 id="sqa">1. SQA Test Cases and Results</h1>
+          <h2>Purpose</h2>
+
+
+          <div class="subsection-info">
+            <div>
+                <table class="content-table">
+                <tbody>
+                <tr>
+                <td>Page Type</td>
+                <td>Test Case</td>
+                <td>Expected Result</td>
+                <td >Actual Result</td>
+                </tr>
+                <tr>
+                <td rowspan="4">Log in</td>
+                <td>Log-in (valid username/password)</td>
+                <td>Successful log-in</td>
+                <td class="SQA-fixed"><span >Successful log-in</span></td>
+                </tr>
+                <tr>
+                <td>Log-in (invalid username/password)</td>
+                <td>Error message stating invalid username/password</td>
+                <td class="SQA-fixed"><span >Error message displayed stating invalid username/password</span></td>
+                </tr>
+                <tr>
+                <td>Input password too short</td>
+                <td>Error message stating improper password</td>
+                <td class="SQA-fixed"><span >Error message displayed stating improper password</span></td>
+                </tr>
+                <tr>
+                <td>Click Sign-up to switch tabs</td>
+                <td>Switch to sign up page to create user</td>
+                <td class="SQA-fixed"><span >Page changed to sign-up page</span></td>
+                </tr>
+                <tr>
+                <td rowspan="4">Sign-up</td>
+                <td>User creation (user already exists)</td>
+                <td>Error message displayed</td>
+                <td class="SQA-fixed"><span >Message displayed informing user that username is taken, new user not made</span></td>
+                </tr>
+                <tr>
+                <td>User creation (invalid username/password)</td>
+                <td>Error message displayed</td>
+                <td class="SQA-fixed"><span >Message displayed informing user that password/ username is incorrect (ie password must match, must be minimum 8 characters)</span></td>
+                </tr>
+                <tr>
+                <td>User creation (valid username/password)</td>
+                <td>User created, message displayed</td>
+                <td class="SQA-fixed"><span >Message displayed that the user is created and to navigate back to log-in. Page changed back to log-in</span></td>
+                </tr>
+                <tr>
+                <td>Click log-in to switch tabs</td>
+                <td>Switch to log-in page to sign-in with existing user</td>
+                <td class="SQA-fixed"><span >Page changed to sign-up page</span></td>
+                </tr>
+                <tr>
+                <td rowspan="4">Movie Selection</td>
+                <td>&ldquo;Like&rdquo; a recommended movie</td>
+                <td>Logged to records and next movie displayed</td>
+                <td class="SQA-fixed"><span >Logged to records and next movie displayed</span></td>
+                </tr>
+                <tr>
+                <td>&ldquo;Dislike&rdquo; a recommended movie</td>
+                <td>Logged to records and next movie displayed</td>
+                <td class="SQA-fixed"><span >Logged to records and next movie displayed</span></td>
+                </tr>
+                <tr>
+                <td>No movies left for user-v1.0</td>
+                <td>Message displayed - No movies left</td>
+                <td class="SQA-dismissed"><span >No message displayed</span></td>
+                </tr>
+                <tr>
+                <td>No movies left for user-v1.1</td>
+                <td>Message displayed</td>
+                <td class="SQA-fixed"><span>Correct message to user that movie list is depleted displayed</span></td>
+                </tr>
+                <tr>
+                <td rowspan="5">Theatre</td>
+                <td>View theatre matches</td>
+                <td>Matches displayed</td>
+                <td class="SQA-fixed"><span>Matches displayed</span></td>
+                </tr>
+                <tr>
+                <td>Add valid member to theatre</td>
+                <td>Member successfully added</td>
+                <td class="SQA-fixed"><span >Member successfully added</span></td>
+                </tr>
+                <tr>
+                <td>Add invalid member to theatre</td>
+                <td>Error message displayed</td>
+                <td class="SQA-fixed"><span >Error message displayed</span></td>
+                </tr>
+                <tr>
+                <td>Remove valid member from theatre</td>
+                <td>Member successfully removed</td>
+                <td class="SQA-fixed"><span >Member successfully removed</span></td>
+                </tr>
+                <tr>
+                <td>Remove invalid member from theatre</td>
+                <td>Error message displayed</td>
+                <td class="SQA-fixed"><span >Error message displayed</span></td>
+                </tr>
+                <tr>
+                <td rowspan="3">Profile</td>
+                <td>Change Username</td>
+                <td>Prompts user to enter a new username</td>
+                <td class="SQA-fixed"><span >Correctly prompts user to change username, when username submitted the new username replaces old in the profile and database.</span></td>
+                </tr>
+                <tr>
+                <td>Clear Notifications-v1.0</td>
+                <td>Clears all user notifications&nbsp;</td>
+                <td class="SQA-dismissed"><span >Notifications not cleared</span></td>
+                </tr>
+                <tr>
+                <td>Clear Notifications-v1.1</td>
+                <td>Clears all user notifications&nbsp;</td>
+                <td class="SQA-fixed"><span >Correctly clears all user notifications</span></td>
+                </tr>
+                </tbody>
+                </table>
+                </div>
+          </div>
+
+          <!-- 2. Version History -->
+        <h1 id="version-history">2. Version History</h1>
+        <div class="section-info">
+          <h3>Version 1.0</h3>
+          <h3>08/08/2021 Initial Draft - Each member ran the above tests to ensure consistency in the outputs</h3>
+          <div class="subsection-info">
+            <ul>
+                <li>Alexander Dimitrakoudis</li>
+                <li>Andrew Liutiev</li>
+                <li>Andrew Maxwell</li>
+                <li>Matthew Dibble</li>
+                <li>Michael Veloso</li>
+                <li>Mustafa Raza</li>
+                <li>Scott Baker</li>
+                </ul>
+          </div>
+
+        </div>
+      
+    </div>
+  </body>
+</html>

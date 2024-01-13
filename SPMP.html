@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <head>
+    <title>Flick</title>
+    <script src="script.js"></script>
+  </head>
+  <body>
+  <!-- <body onresize="handleResize()"> -->
+    <div id="sidebar">
+      <img
+        id="menu-button"
+        src="assets/hamburger-icon.svg"
+        onclick="changeMenu()"
+      />
+
+      <!-- Sidebar -->
+      <div id="sidebar-container">
+        <a href="https://flick-cp317.github.io/docs/index.html"><img src="assets/flick-logo.svg" alt="" /></a>
+
+        <!-- 1. Overview -->
+        <div class="section">
+          <a class="section-header" href="#overview">1. Overview</a>
+          <table class="subsections">
+            <tr>
+              <td><span class="subsection-num">1.1</span></td>
+              <td>
+                <a class="subsection-header" href="#overview-purpose-scope">Purpose and Scope</a>
+              </td>
+            </tr>
+            <tr>
+              <td><span class="subsection-num">1.2</span></td>
+              <td>
+                <a class="subsection-header" href="#overview-assumptions-constraints">Assumptions and Constraints</a>
+              </td>
+            </tr>
+            <tr>
+              <td><span class="subsection-num">1.3</span></td>
+              <td>
+                <a class="subsection-header" href="#overview-deliverables">Project Deliverables</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td><span class="subsection-num">1.4</span></td>
+              <td>
+                <a class="subsection-header" href="#overview-evolution">Evolution of the SPMP</a
+                >
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- 2. References -->
+        <div class="section">
+          <a class="section-header" href="#references">2. References</a>
+        </div>
+
+        <!-- 3. Definitions -->
+        <div class="section">
+          <a class="section-header" href="#definitions">3. Definitions</a
+          >
+        </div>
+
+        <!-- 4. Project Organization -->
+        <div class="section">
+          <a class="section-header" href="#organization">4. Project Organization</a>
+          <table class="subsections">
+            <tr>
+              <td><span class="subsection-num">4.1</span></td>
+              <td>
+                <a class="subsection-header" href="#organization-roles">Roles and Responsibilities</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- 5. Managerial Process Plans -->
+        <div class="section">
+          <a class="section-header" href="#managerial">5. Managerial Process Plans</a>
+          <table class="subsections">
+            <tr>
+              <td><span class="subsection-num">5.1</span></td>
+              <td>
+                <a class="subsection-header" href="#managerial-work">Work Plan</a>
+              </td>
+            </tr>
+            <tr>
+              <td><span class="subsection-num">5.2</span></td>
+              <td>
+                <a class="subsection-header" href="#managerial-control">Control Plan</a>
+              </td>
+            </tr>
+            <tr>
+              <td><span class="subsection-num">5.3</span></td>
+              <td>
+                <a class="subsection-header" href="#managerial-risk">Risk Management Plan</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- 6. Technical Process Plans -->
+        <div class="section">
+          <a class="section-header" href="#technical">6. Technical Process Plans</a>
+          <table class="subsections">
+              <td><span class="subsection-num">6.1</span></td>
+              <td>
+                <a class="subsection-header" href="#technical-methods">Methods, Tools, and Techniques</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+         <!-- 7. Supporting Process Plans -->
+         <div class="section">
+          <a class="section-header" href="#supporting">7. Supporting Process Plans</a>
+          <table class="subsections">
+            <tr>
+              <td><span class="subsection-num">7.1</span></td>
+              <td>
+                <a class="subsection-header" href="#supporting-validation">Verification and Validation Plan</a>
+              </td>
+            </tr>
+            <tr>
+              <td><span class="subsection-num">7.2</span></td>
+              <td>
+                <a class="subsection-header" href="#supporting-documentation">Documentation Plan</a>
+              </td>
+            </tr>
+            <tr>
+              <td><span class="subsection-num">7.3</span></td>
+              <td>
+                <a class="subsection-header" href="#supporting-quality">Quality Assurance Plan</a>
+              </td>
+            </tr>
+            <tr>
+              <td><span class="subsection-num">7.4</span></td>
+              <td>
+                <a class="subsection-header" href="#supporting-problem">Problem Resolution Plan</a>
+              </td>
+            </tr>
+            <tr>
+              <td><span class="subsection-num">7.5</span></td>
+              <td>
+                <a class="subsection-header" href="#supporting-improvement">Process Improvement Plan</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- Appendix -->
+        <div class="section">
+          <a class="section-header" href="#appendix">Appendix</a>
+          <table class="subsections">
+            <tr>
+              <td><span class="subsection-num">8</span></td>
+              <td>
+                <a class="subsection-header" href="#appendix-authored">Authored By</a>
+              </td>
+            </tr>
+            <tr>
+              <td><span class="subsection-num">9</span></td>
+              <td>
+                <a class="subsection-header" href="#appendix-version">Version</a>
+              </td>
+            </tr>
+            <tr>
+              <td><span class="subsection-num">10</span></td>
+              <td>
+                <a class="subsection-header" href="#appendix-sqa">SQA</a>
+              </td>
+            </tr>
+            <tr>
+              <td><span class="subsection-num">11</span></td>
+              <td>
+                <a class="subsection-header" href="#document-changes">Document Changes</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div id="content">
+      <div id="content-container">
+
+        <!-- 1. OVERVIEW -->
+        <h1 id="overview">1. Overview</h1>
+        <div class="subsection-info">
+          <p>See Requirements document</p>
+          <a href="https://flick-cp317.github.io/docs/requirements.html#intro-overview">Overview</a>
+          <br>
+        </div>
+        <div class="section-info">
+          <h2 id="overview-purpose-scope">1.1 Purpose and Scope</h2>
+          <div class="subsection-info">
+              <p>See Requirements document</p>
+              <a href="https://flick-cp317.github.io/docs/requirements.html#intro-purpose">Purpose</a>
+              <br>
+              <a href="https://flick-cp317.github.io/docs/requirements.html#intro-scope">Scope</a>
+          </div>
+          <h2 id="overview-assumptions-constraints">1.2 Assumptions and Constraints</h2>
+          <div class="subsection-info">
+            <p>See Requirements document</p>
+            <a href="https://flick-cp317.github.io/docs/requirements.html#desc-assumptions">Assumptions and Dependencies</a>
+            <br>
+            <a href="https://flick-cp317.github.io/docs/requirements.html#desc-constraints">Constraints</a>
+        </div>
+          <h2 id="overview-deliverables">
+            1.3 Project Deliverables
+          </h2>
+          <div class="subsection-info">
+            <table class="content-table">
+                <tr>
+                    <th>Step</th>
+                    <th>Deliverable</th>
+                    <th>Deadline</th>
+                    <th>Adjusted Deadline</th>
+                    <th>Reason for Adjustment</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Software Requirements Specification</td>
+                    <td>May 25, 2021</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Software Requirements Specification SQA</td>
+                    <td>May 27, 2021</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Software Project Management Plan</td>
+                    <td>June 2, 2021</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Software Project Management Plan SQA</td>
+                    <td>June 3, 2021</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Analysis</td>
+                    <td>June 21, 2021</td>
+                    <td>June 30th, 2021</td>
+                    <td>Extension given</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Analysis SQA</td>
+                    <td>June 23, 2021</td>
+                    <td>July 2nd, 2021</td>
+                    <td>Extension given</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Design</td>
+                    <td>July 10, 2021</td>
+                    <td>July 15th, 2021</td>
+                    <td>Extension given & work took longer than expected</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Design SQA</td>
+                    <td>July 12, 2021</td>
+                    <td>July 16th,2021</td>
+                    <td>Extension given & work took longer than expected</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Implementation</td>
+                    <td>July 30, 2021</td>
+                    <td>August 7th, 2021</td>
+                    <td>Extension given & work took longer than expected</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Implementation SQA</td>
+                    <td>August 1, 2021</td>
+                    <td>August 14th, 2021</td>
+                    <td>Extension given & work took longer than expected</td>
+                </tr>
+            </table>
+          </div>
+          <h2 id="overview-evolution">1.4 Evolution of the SPMP</h2>
+          <div class="subsection-info">
+            <p>As the project progresses and develops, sections of the SPMP will require updates and revisions. These may include the following sections: 
+            <ul class="subsubsection">
+                <li>1.3 Project Deliverables</li>
+                <li>2. References</li>
+                <li>3. Definitions</li>
+                <li>4.1 Project Organization</li>
+                <li>5.1 Work Plan</li>
+                <li>6.1 Methods, Tools and Techniques</li>
+            </ul>
+            Version history including updates and revisions will be included at the bottom of each project page. Updates are scheduled to occur as needed with expected updates occurring before each assignment submission date.
+            </p>
+          </div>
+        </div>
+        <br></br>
+
+        <!-- 2. REFERENCES -->
+        <h1 id="references">2. References</h1>
+        <div class="section-info">
+          <div class="subsection-info">
+            <a href="https://cours.etsmtl.ca/log792/private/restreint/IEEE_1058_Project_Management_Plan.pdf">SPMP Standards</a>
+          </div>
+        </div>
+        <br></br>
+
+        <!-- 3. DEFINITIONS -->
+        <h1 id="definitions">3. Definitions</h1>
+        <div class="section-info">
+          <div class="subsection-info">
+            <p>See SRS document <a href="https://flick-cp317.github.io/docs/requirements.html#intro-definitions">definitions</a></p>
+            
+            <p>Additional Definitions:</p>
+            <ul class="subsubsection">
+              <li>Group: all members of the project</li>
+              <li>Team: members will be split into front-end, back-end, or database sections; each section representing a team</li>
+            </ul>
+          </div>
+        </div>
+        <br></br>
+
+        <!-- 4. PROJECT ORGANIZATION -->
+        <h1 id="organization">4. Project Organization</h1>
+        <div class="section-info">
+            <h2 id="organization-roles">4.1 Roles and Responsibilities</h2>
+          <div class="subsection-info">
+            <table class="content-table">
+                <tr>
+                    <th>No.</th>
+                    <th>Deliverable</th>
+                    <th>Working Team</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Software Requirement Specification</td>
+                    <td>Alexander Dimitrakoudis, Andrew Liutiev, Cassidy Huang, Connor Kanalec, Harchit Bhatoia, Lavisha Bugreja, Michael Veloso, Mustafa Raza, Scott Baker, Tharssan Srikanthan, Timothy Arsan, Ya Jun Shao</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Software requirement Specification SQA</td>
+                    <td>Amy Zhao, Andrew Maxwell, Kara Kim, Matthew Dibble</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Software Project Management Plan</td>
+                    <td>Alexander Dimitrakoudis, Amy Zhao, Connor Kanalec, Michael Veloso, Scott Baker, Ya Jun Shao</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Software Project Management Plan SQA</td>
+                    <td>Andrew Liutiev, Cassidy Huang, Harchit Bhatoia, Lavisha Bugreja, Mustafa Raza, Tharssan Srikanthan, Timothy Arsan</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Analysis</td>
+                    <td>Alexander Dimitrakoudis, Amy Zhao, Cassidy Huang, Connor Kanalec, Lavisha Bugreja, Matthew Dibble, Mustafa Raza, Scott Baker, Andrew Maxwell, Kara Kim</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Analysis SQA</td>
+                    <td>Michael Veloso, Tharssan Srikanthan, Ya Jun Shao, Harchit Bhatoia, Timothy Arsan</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Design</td>
+                    <td>Alexander Dimitrakoudis, Amy Zhao, Andrew Liutiev, Cassidy Huang, Connor Kanalec, Kara Kim, Lavisha Bugreja, Matthew Dibble, Michael Veloso, Mustafa Raza, Scott Baker, Tharssan Srikanthan, Ya Jun Shao</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Design SQA</td>
+                    <td>Tharssan Srikanthan, Harchit Bhatoia, Timothy Arsan</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Implementation - Front-end</td>
+                    <td>Andrew Maxwell, Amy Zhao, Cassidy Huang, Tharssan Srikanthan, Lavisha Bugreja, Ya Jun Shao</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Implementation - Back-end</td>
+                    <td>Scott Baker, Connor Kanalec, Matthew Dibble, Andrew Liutiev, Kara Kim, Michael Veloso</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>Implementation - Database</td>
+                    <td>Alexander Dimitrakoudis, Harchit Bhatoia, Mustafa Raza, Timothy Arsan</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>Implementation SQA - Front-end</td>
+                    <td>Alexander Dimitrakoudis, Harchit Bhatoia, Mustafa Raza, Timothy Arsan</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>Implementation SQA - Back-end</td>
+                    <td>Andrew Maxwell, Amy Zhao, Cassidy Huang, Tharssan Srikanthan, Lavisha Bugreja, Ya Jun Shao</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>Implementation SQA - Database</td>
+                    <td>Scott Baker, Connor Kanalec, Matthew Dibble, Andrew Liutiev, Kara Kim, Michael Veloso</td>
+                </tr>
+            </table>
+          </div>
+        </div>
+        <br></br>
+
+        <!-- 5. MANAGERIAL PROCESS PLAN -->
+        <h1 id="managerial">5. Managerial Process Plan</h1>
+        <div class="section-info">
+            <h2 id="managerial-work">5.1 Work Plan</h2>
+            <h3 class="subsubsection">5.1.1 Schedule Allocation</h3>
+          <div class="subsection-info subsubsection">
+            <table class="content-table">
+              <!-- Table Headers -->
+              <tr>
+                  <th>No.</th>
+                  <th>Milestone</th>
+                  <th>Version</th>
+                  <th>Deadline</th>
+                  <th>Adjusted Deadline</th>
+                  <th>Reason for Adjustment</th>
+              </tr>
+              <!-- #1 -->
+              <tr>
+                  <td rowspan="3">1</td>
+                  <td rowspan="3">Software Requirements Specification (SRS)</td>
+                  <td>Rough Draft</td>
+                  <td>May 25, 2021</td>
+                  <td></td>
+                  <td></td>
+              </tr>
+              <tr>
+                <td>HTML Creation</td>
+                <td>May 26, 2021</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>SQA</td>
+                <td>May 27, 2021</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <!-- #2 -->
+              <tr>
+                <td rowspan="3">2</td>
+                <td rowspan="3">Software Project Management Plan (SPMP)</td>
+                <td>Rough Draft</td>
+                <td>June 2, 2021</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>HTML Creation</td>
+                <td>June 2, 2021</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>SQA</td>
+                <td>June 3, 2021</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <!-- #3 -->
+              <tr>
+                <td rowspan="3">3</td>
+                <td rowspan="3">Analysis</td>
+                <td>Rough Draft</td>
+                <td>June 21, 2021</td>
+                <td>June 30th, 2021</td>
+                <td>Extension given</td>
+              </tr>
+              <tr>
+                <td>HTML Creation</td>
+                <td>June 21, 2021</td>
+                <td>July 2nd, 2021</td>
+                <td>Extension given</td>
+              </tr>
+              <tr>
+                <td>SQA</td>
+                <td>June 23, 2021</td>
+                <td>July 15th, 2021</td>
+                <td>Extension given & work took longer than expected</td>
+              </tr>
+              <!-- #4 -->
+              <tr>
+                <td rowspan="3">4</td>
+                <td rowspan="3">Design</td>
+                <td>Rough Draft</td>
+                <td>July 10, 2021</td>
+                <td>July 16th,  2021</td>
+                <td>Extension given & work took longer than expected</td>
+              </tr>
+              <tr>
+                <td>HTML Creation</td>
+                <td>July 10, 2021</td>
+                <td>July 16th,  2021</td>
+                <td>Extension given & work took longer than expected</td>
+              </tr>
+              <tr>
+                <td>SQA</td>
+                <td>July 12, 2021</td>
+                <td>July 16th,  2021</td>
+                <td>Extension given & work took longer than expected</td>
+              </tr>
+              <!-- #5 -->
+              <tr>
+                <td rowspan="5">5</td>
+                <td rowspan="5">Implementation</td>
+                <td>Database Creation</td>
+                <td>July 25, 2021</td>
+                <td>July 26, 2021</td>
+                <td>Extension given & work took longer than expected</td>
+              </tr>
+              <tr>
+                <td>Back-End</td>
+                <td>July 25, 2021</td>
+                <td>July 31, 2021</td>
+                <td>Extension given & work took longer than expected</td>
+              </tr>
+              <tr>
+                <td>Front-End</td>
+                <td>July 25, 2021</td>
+                <td>August 7, 2021</td>
+                <td>Extension given & work took longer than expected</td>
+              </tr>     
+              <tr>
+                <td>Documentation</td>
+                <td>July 25, 2021</td>
+                <td>August 7, 2021</td>
+                <td>Extension given & work took longer than expected</td>
+              </tr>   
+              <tr>
+                <td>SQA</td>
+                <td>August 1, 2021</td>
+                <td>August 14, 2021</td>
+                <td>Extension given & work took longer than expected</td>
+              </tr>            
+            </table>
+          </div>
+          <br>
+
+          <h2 id="managerial-control">5.2 Control Plan</h2>
+          <div class="subsection-info">
+          <p>
+            The Flick team will be using a variety of software to maintain control and visibility of project milestones. Outlined below is a breakdown of our control plan.
+          </p>
+          <b>Quality:</b>
+          <ul class="subsubsection">
+            <li>Git will be used for version control.</li>
+            <li>See <a href="#supporting-quality">Section 7.3</a> to see our full quality assurance plan.</li>
+          </ul>
+          <b>Reporting and Requirements:</b>
+          <ul class="subsubsection">
+            <li>Discord & Facebook messenger will be used for communication.</li>
+            <li>Group meetings will be held every Tuesday & Thursday at noon (unless otherwise specified) for status updates, change requests, and review.</li>
+            <li>Meeting notes and next steps will also be documented using Google Docs.</li>
+          </ul>
+          <b>Schedule:</b>
+          <ul class="subsubsection">
+            <li>Trello will be used for project management along with GitHub Projects.</li>
+            <li> Google Sheets will be used to track individual contributions and hours worked.</li>
+          </ul>
+        </div>
+
+        <br>
+        <h2 id="managerial-risk">5.3 Risk Management Plan</h2>
+        <div class="subsection-info">
+          <p>
+            The Flick team has created a risk assessment plan to help identify, assess and resolve issues that may arise throughout the project life-cycle. Below outlines the procedures created to handle each section of the risk-resolution process.
+          </p>
+          <b>Identify</b>
+          <ul class="subsubsection">
+            <li>Contact leads from each sub group (front-end and back-end) will meet weekly to provide updates on issues and progress made.</li>
+          </ul>
+          <b>Analyze</b>
+          <ul class="subsubsection">
+            <li>The issues will be brought back to the respective team for analysis.</li>
+          </ul>
+          <b>Prioritize</b>
+          <ul class="subsubsection">
+            <li>Teams will brainstorm potential solutions (estimates of work required, time to complete, etc.) and contact leads will meet to establish priority of issues to work on.</li>
+          </ul>
+
+          <br>
+          <h3 style="margin-left:0">Risks</h3>
+          <ol class="subsubsection">
+            <li><b>Database size:</b> The database can become very large due to the quantity of information if users cannot find a movie match and the algorithm is inaccurate in displaying new movies of interest, thus continuing to display many options.</li>
+            <li><b>New tools and minimal time:</b> The time required to learn new tools during the implementation phase, as a lot of members will be using them for the first time</li>
+            <li><b>Server overload and delay:</b> If there are too many users selecting movies at the same time.</li>
+          </ol>
+        </div>
+
+        <br>
+        <h1 id="technical">6. Technical Process Plans</h1>
+        <div class="section-info">
+            <h2 id="technical-methods">6.1 Methods, Tools, and Techniques</h2>
+            <div class="subsection-info">
+              <ul class="subsubsection">
+                <li><b>React, HTML, CSS, Javascript (Front-end):</b> By choosing to work in React, the team is able to leverage the compatibility with React Native should we wish to develop a mobile app alongside the web page.</li>
+                <li><b>NodeJS (Back-end):</b> Due to strong compatibility with React and the abundance of online resources related to the software and how to integrate the two, NodeJS is the optimal environment for the backend due to the time constraints of the project.</li>
+                <li><b>PostgreSQL (Database):</b> Since the team has existing knowledge of SQL, we are using an SQL database to help reduce learning times due to the large time constraints of the project.</li>
+                <li><b>GIT (Versioning):</b> As a free service with many training resources this is the easiest versioning software to use for the project.</li>
+              </ul>
+            </div>
+        </div>
+
+        <br>
+        <h1 id="supporting">7. Supporting Process Plan</h1>
+        <div class="section-info">
+            <h2 id="supporting-validation">7.1 Verification and Validation Plan</h2>
+            <div class="subsection-info">
+              <p>The following specifies the verification and validation work activities for the project.</p>
+              <b>Verification Plan:</b>
+              <ul class="subsubsection">
+                <li>Before beginning each new phase, will hold milestone review to ensure timelines are feasible and subtasks are properly planned out.</li>
+                <li>Progress reviews at midpoint of expected timeline to evaluate the status of the work compared to expectations and any issues that need to be addressed.</li>
+                <li>The application will be prototyped and simulated using Figma prior to development.</li>
+              </ul>
+              <b>Validation Plan: </b>
+              <ul class="subsubsection">
+                <li>Testing of features and functionality will occur concurrently with development.</li>
+                <li>Demonstrations of functionality relevant to multiple teams will occur at group meetings.</li>
+                <li>Once features are developed, teams will meet to analyze and inspect the work completed.</li>
+              </ul>
+            </div>
+
+            <br>
+            <h2 id="supporting-documentation">7.2 Documentation Plan</h2>
+            <div class="subsection-info">
+                 <table class="content-table">
+                     <tr>
+                         <th>Name</th>
+                         <th>Standard/Template</th>
+                         <th>Reviewed By</th>
+                     </tr>
+                     <tr>
+                         <td>Requirements Document</td>
+                         <td>IEEE</td>
+                         <td rowspan="4">See <a href="#organization-roles">Section 4.1</a> Roles and Responsibilities for the working teams<br>See <a href="#managerial-work">Section 5.1</a> Schedule Allocation for deadlines</td>
+                     </tr>
+                     <tr>
+                        <td>Analysis Document</td>
+                        <td>IEEE</td>
+                    </tr>
+                    <tr>
+                        <td>Design Document</td>
+                        <td>Group made based on IEEE</td>
+                    </tr>
+                    <tr>
+                        <td>User Document</td>
+                        <td>N/A</td>
+                    </tr>
+                    <tr>
+                        <td>Meeting Minutes</td>
+                        <td>Self documentation using internal Excel sheet</td>
+                        <td>Every sub-team's lead</td>
+                    </tr>
+                    <tr>
+                        <td>Source Code</td>
+                        <td>N/A</td>
+                        <td><a href="#organization-roles">SQA Team</td>
+                    </tr>
+                 </table>
+            </div>
+            <h2 id="supporting-quality">7.3 Quality Assurance Plan</h2>
+            <div class="subsection-info">
+              <p>This section will outline and contrast the various analyses and auditing procedures that will take place throughout the development of the platform to ensure that the application works as specified in the documentation.</p>
+              <br>
+              <p>Each team will work on the same structure to deliver well polished work. Any output will go through the following steps:</p>
+              <ol class="subsubsection">
+                <li>Planning of requirements and design for the deliverable</li>
+                <li>Rough draft of the deliverable</li>
+                <li>Revision of the deliverable</li>
+                <li>SQA</li>
+                <li>Adjustments based on SQA feedback</li>
+                <li>Final product</li>
+              </ol>
+              <br>
+              <p>This process will follow the waterfall methodology of work and will ensure that maintaining deadlines remain manageable for the team, as tracking progress is simplified. Completion of tasks will follow this linear process.</p>
+            </div>
+            <h2 id="supporting-problem">7.4 Problem Resolution Plan</h2>
+            <div class="subsection-info">
+              Problems identified externally through project submissions will be assessed by team leads, who will create a problem report and prioritize solutions accordingly.
+            </div>
+            <h2 id="supporting-improvement">7.5 Process Improvement Plan</h2>
+            <div class="subsection-info">
+              After each deliverable submission, the team will analyze the feedback and determine what potential improvements could be made. The team will also discuss internally what areas could be improved going forward. The team leads will then prioritize the changes based on level of disruption to the project. Agreed upon changes will be communicated and then carried out.
+            </div>
+        </div>
+
+        <br>
+        <h1 id="appendix">Appendix</h1>
+        <h2 id="appendix-authored">8. Authored By</h2>
+        <div class="subsection-info">
+          <ul class="subsubsection">
+            <li>Amy Zhao</li>
+            <li>Alexander Dimitrakoudis</li>
+            <li>Connor Kanalec</li>
+            <li>Michael Veloso</li>
+            <li>Scott Baker</li>
+            <li>Ya Jun Shao</li>
+          </ul>
+        </div>
+        <h2 id="appendix-version">9. Version History</h2>
+        <div class="subsection-info">
+          <h3>Version 0.1</h3>
+          <div class="subsection-info subsubsection">
+            <p>6/02/2021 [Sections 1-7] Initial Draft
+              <ul class="subsubsection">
+                <li>Amy Zhao</li>
+                <li>Alexander Dimitrakoudis</li>
+                <li>Connor Kanalec</li>
+                <li>Michael Veloso</li>
+                <li>Scott Baker</li>
+                <li>Ya Jun Shao</li>
+              </ul>
+              <br>
+              6/03/2021 [HTML] Initial Draft
+                <ul class="subsubsection">
+                  <li>Andrew Maxwell</li>
+                  <li>Kara Kim</li>
+                  <li>Matthew Dibble</li>
+                </ul>
+              <br>
+              8/02/2021 [Sections 1-7] Final Back-End Revisions
+                <ul class="subsubsection">
+                  <li>Kara Kim</li>
+                  <li>Matthew Dibble</li>
+                  <li>Michael Veloso</li>
+                  <li>Scott Baker</li>
+                </ul>
+                <br>
+              8/07/2021 [Sections 1-7] Front-End Adjustments to Match Implementation
+                <ul class="subsubsection">
+                  <li>Amy Zhao</li>
+                <li>Andrew Maxwell</li>
+                <li>Cassidy Huang</li>
+                <li>Lavisha Bugreja</li>
+                <li>Tharssan Srikanthan</li>
+                <li>Ya Jun Shao</li>
+                </ul>
+              
+          </div>
+        </div>
+
+        <h2 id="appendix-sqa">10. SQA</h2>
+        <div class="section-info">
+            <table class="content-table">
+                <tr>
+                    <th>No.</th>
+                    <th>Author</th>
+                    <th>v. In</th>
+                    <th>Description</th>
+                    <th>Status</th>
+                    <th>Explanation</th>
+                    <th>Verified By:</th>
+                    <th>v. Out</th>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>Mustafa Raza</td>
+                  <td>v0.1</td>
+                  <td>Section 1.4: The list of sections should also include Section 1.3. Won’t we also have to update this section if we ever need to adjust a deadline for a deliverable? </td>
+                  <td class="SQA-fixed">Fixed</td>
+                  <td>  </td>
+                  <td>Ya Jun Shao</td>
+                  <td>v0.2</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Lavisha Bugreja</td>
+                  <td>v0.1</td>
+                  <td>Section 2,3: Refer to the requirements document as “SRS Document”</td>
+                  <td class="SQA-fixed">Fixed</td>
+                  <td>  </td>
+                  <td>Ya Jun Shao</td>
+                  <td>v0.2</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Mustafa Raza</td>
+                  <td>v0.1</td>
+                  <td>Section 2: We should cite the SPMP IEEE document in the References section. Of all the project examples, I haven’t seen any refer back to their Requirements document for a list of References. They always explicitly list out the references used.</td>
+                  <td class="SQA-fixed">Fixed</td>
+                  <td>Added link for IEEE Standard under References, and removed link to SRS doc due to redundancy</td>
+                  <td>Ya Jun Shao</td>
+                  <td>v0.2</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Andrew Liutiev</td>
+                  <td>v0.1</td>
+                  <td>Section 3.3: Should we update this section as we progress working with the backend & database teams?</td>
+                  <td></td>
+                  <td> </td>
+                  <td>Ya Jun Shao</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>Mustafa Raza</td>
+                  <td>v0.1</td>
+                  <td>Section 4.1 heading: “Roles and Responsiblities” should be  “Roles and Responsibilities”</td>
+                  <td class="SQA-fixed">Fixed</td>
+                  <td>  </td>
+                  <td>Andrew Maxwell</td>
+                  <td>v0.2</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>Mustafa Raza</td>
+                  <td>v0.1</td>
+                  <td>Section 4.1 - No. 3 and No. 4: Shift “Andrew Maxwell” from the SPMP SQA section to the SPMP section</td>
+                  <td class="SQA-fixed">Fixed</td>
+                  <td>  </td>
+                  <td>Andrew Maxwell</td>
+                  <td>v0.2</td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>Mustafa Raza</td>
+                  <td>v0.1</td>
+                  <td>Section 4.1 - No. 2: “Software Reqiurement” should be  “Software Requirement”</td>
+                  <td class="SQA-fixed">Fixed</td>
+                  <td>  </td>
+                  <td>Andrew Maxwell</td>
+                  <td>v0.2</td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>Lavisha Bugreja</td>
+                  <td>v0.1</td>
+                  <td>Section 5.1.1: Should we include a column for when the milestone was actually achieved?</td>
+                  <td class="SQA-dismissed">Dismissed</td>
+                  <td>We’re assuming all milestones will be achieved before/on their deadline. If we miss a deadline, the Adjusted Deadline will be set as the date of completion.</td>
+                  <td>Ya Jun Shao</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9</td>
+                  <td>Lavisha Bugreja</td>
+                  <td>v0.1</td>
+                  <td>Section 5.1.1: Do we want to use a Gantt Chart to show milestones?</td>
+                  <td class="SQA-tbd">TBD</td>
+                  <td>Will implement in future when have more detail about specific milestones</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td>Mustafa Raza</td>
+                  <td>v0.1</td>
+                  <td>In Section 5.1.1 - No. 5, we write “back-end” and “front-end” whereas in Section 4.1 - No. 12/13, we write “backend” and “frontend”. Please make the spelling consistent.</td>
+                  <td class="SQA-fixed">Fixed</td>
+                  <td>Added hyphens to all instances, since they’re defined in the SRS doc as hyphenated</td>
+                  <td>Ya Jun Shao</td>
+                  <td>v0.2</td>
+                </tr>
+                <tr>
+                  <td>11</td>
+                  <td>Cassidy Huang</td>
+                  <td>v0.1</td>
+                  <td>Section 5.2: Do we need to be more specific about what Trello will be used for (i.e. will each team track their own activities or is it overall for the entire group?)</td>
+                  <td class="SQA-dismissed">Dismissed</td>
+                  <td>Specifics of implementation will be determined at later date</td>
+                  <td>Alexander Dimitrakoudis</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>12</td>
+                  <td>Timothy Arsan</td>
+                  <td>v0.1</td>
+                  <td>Section 5.2: We should include an exact meeting time as a part of reporting & requirements (noon, unless otherwise agreed upon)</td>
+                  <td class="SQA-fixed">Fixed</td>
+                  <td>  </td>
+                  <td>Ya Jun Shao</td>
+                  <td>v0.2</td>
+                </tr>
+                <tr>
+                  <td>13</td>
+                  <td>Mustafa Raza</td>
+                  <td>v0.1</td>
+                  <td>Section 5.2 - Reporting and Requirements: Use “Facebook Messenger” instead of “Facebook messenger”</td>
+                  <td class="SQA-fixed">Fixed</td>
+                  <td>  </td>
+                  <td>Andrew Maxwell</td>
+                  <td>v0.2</td>
+                </tr>
+                <tr>
+                  <td>14</td>
+                  <td>Mustafa Raza</td>
+                  <td>v0.1</td>
+                  <td>In Section 5.2 - Quality, when we introduce “Section 7.3”, we don’t mention the title of the section.
+                    However, in Section 7.2 - Reviewed By, we do mention the title of the sections after introducing the section number. Ex: “See Section 4.1 Roles and Responsibilities”. Keep a consistent format here, either always mentioning the titles when we refer to a section number or never.</td>
+                  <td class="SQA-fixed">Fixed</td>
+                  <td>  </td>
+                  <td>Andrew Maxwell</td>
+                  <td>v0.2</td>
+                </tr>
+                <tr>
+                  <td>15</td>
+                  <td>Timothy Arsan</td>
+                  <td>v0.1</td>
+                  <td>Section 5.2: “Softwares” is not a word, “software” is also the plural form</td>
+                  <td class="SQA-fixed">Fixed</td>
+                  <td>  </td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>16</td>
+                  <td>Tharssan Srikanthan</td>
+                  <td>v0.1</td>
+                  <td>Section 5.3, 7.2: Instead of “sub groups” we could say implementation groups</td>
+                  <td class="SQA-fixed">Fixed</td>
+                  <td>  </td>
+                  <td>Andrew Maxwell</td>
+                  <td>v0.2</td>
+                </tr>
+                <tr>
+                  <td>17</td>
+                  <td>Tharssan Srikanthan</td>
+                  <td>v0.1</td>
+                  <td>Section 5.3, 7.4,7.5: Should we be saying team/contact leaders instead of the team/contact leads? </td>
+                  <td class="SQA-dismissed">Dismissed</td>
+                  <td>  </td>
+                  <td>Ya Jun Shao</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>18</td>
+                  <td>Tharssan Srikanthan</td>
+                  <td>v0.1</td>
+                  <td>Section 5.3 Risks Step 2: Instead of “as a lot of members” we could say as most of the members</td>
+                  <td class="SQA-fixed">Fixed</td>
+                  <td>  </td>
+                  <td>Scott Baker</td>
+                  <td>v0.2</td>
+                </tr>
+                <tr>
+                  <td>19</td>
+                  <td>Tharssan Srikanthan</td>
+                  <td>v0.1</td>
+                  <td>Section 5.3: Should the procedure steps be in numerical instead of point form? Ex: 
+                    1. Identify
+                    2. Analyze
+                    3. Prioritize</td>
+                  <td class="SQA-fixed">Fixed</td>
+                  <td>  </td>
+                  <td>Andrew Maxwell</td>
+                  <td>v0.2</td>
+                </tr>
+                <tr>
+                  <td>20</td>
+                  <td>Cassidy Huang</td>
+                  <td>v0.1</td>
+                  <td>Section 5.3: The blurb before the “Risks” is not included in the HTML version of the SPMP</td>
+                  <td class="SQA-fixed">Fixed</td>
+                  <td>  </td>
+                  <td>Andrew Maxwell</td>
+                  <td>v0.2</td>
+                </tr>
+                <tr>
+                  <td>21</td>
+                  <td>Lavisha Bugreja</td>
+                  <td>v0.1</td>
+                  <td>Section 6.1: Are we including anything under the Process Model section?</td>
+                  <td class="SQA-fixed">Fixed</td>
+                  <td>Removed section (information mentioned in other sections)</td>
+                  <td>Alexander Dimitrakoudis</td>
+                  <td>v0.2</td>
+                </tr>
+                <tr>
+                  <td>22</td>
+                  <td>Mustafa Raza</td>
+                  <td>v0.1</td>
+                  <td>Section 6.2:
+                    We capitalized “Frontend”, “Backend”, and “Database”, but not “versioning”. 
+                    Make the capitalization consistent.</td>
+                  <td class="SQA-fixed">Fixed</td>
+                  <td>  </td>
+                  <td>Andrew Maxwell</td>
+                  <td>v0.2</td>
+                </tr>
+                <tr>
+                  <td>23</td>
+                  <td>Cassidy Huang</td>
+                  <td>v0.1</td>
+                  <td>Section 7 heading:
+                    Inconsistent heading capitalization. The first letter in each word in the title is capitalized, but other section titles are not.
+                    </td>
+                  <td class="SQA-fixed">Fixed</td>
+                  <td>  </td>
+                  <td>Andrew Maxwell</td>
+                  <td>v0.2</td>
+                </tr>
+                <tr>
+                  <td>24</td>
+                  <td>Cassidy Huang</td>
+                  <td>v0.1</td>
+                  <td>Section 7.2:
+                    Include the section numbers in the “Reviewed By” column
+                    </td>
+                  <td class="SQA-dismissed">Dismissed</td>
+                  <td>  </td>
+                  <td>Andrew Maxwell</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>25</td>
+                  <td>Timothy Arsan</td>
+                  <td>v0.1</td>
+                  <td>Overall: Point forms are not in the same formats throughout the doc - some bullet point lists have preceding dots while others have hyphens, make them consistent</td>
+                  <td class="SQA-dismissed">Dismissed</td>
+                  <td>  </td>
+                  <td>Andrew Maxwell</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>26</td>
+                  <td>Scott Baker</td>
+                  <td>v1.0</td>
+                  <td>Overall: Updated document to be consistant with implemented product. Updated sections 1.3, 4.1, 5.1.1, 5.2, ,7.2</td>
+                  <td class="SQA-fixed">Fixed</td>
+                  <td>  </td>
+                  <td>Scott Baker</td>
+                  <td>v1.1</td>
+                </tr>
+            </table>
+
+        </div>
+
+        <h2 id="document-changes">11. Document Changes</h2>
+        <div class="subsection-info">
+          <p><span style="text-decoration: underline;"><strong>SPMP:</strong></span></p>
+<ul>
+<li>1.3 Project Deliverables - updated deadlines for implementation</li>
+<li>4.1 Roles &amp; Responsibilities - assigned teams to SQA</li>
+<li>5.1 Work Plan - updated deadlines for implementation</li>
+<li>5.3 Risk Management Plan - removed &lsquo;swiping&rsquo; action</li>
+<li>7.2 Documentation Plan - updated standards for user document and source code</li>
+</ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

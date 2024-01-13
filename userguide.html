@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <head>
+    <title>Flick</title>
+    <script src="script.js"></script>
+  </head>
+  <body>
+  <!-- <body onresize="handleResize()"> -->
+    <div id="sidebar">
+      <img
+        id="menu-button"
+        src="assets/hamburger-icon.svg"
+        onclick="changeMenu()"
+      />
+      <div id="sidebar-container">
+        <a href="https://flick-cp317.github.io/docs/index.html"><img src="assets/flick-logo.svg" alt="" /></a>
+        <div class="section">
+          <a class="section-header" href="#step1">1. Signing Up/Logging In</a>
+        </div>
+        <div class="section">
+          <a class="section-header" href="#step2">2. View Your Theatres</a>
+        </div>
+        <div class="section">
+          <a class="section-header" href="#step3">3. Add Members to Your Theatre</a
+          >
+          <table class="subsections">
+            <tr>
+              <td><span class="subsection-num">3.1</span></td>
+              <td>
+                <a class="subsection-header" href="#step3-1">Remove Members of Your Theatre</a
+                >
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="section">
+            <a class="section-header" href="#step4">4. View and Select Movies</a>
+        </div>
+        <div class="section">
+            <a class="section-header" href="#step5">5. View User Profile and Notifications</a>
+        </div>
+        <div class="section">
+            <a class="section-header" href="#step6">6. Additional Help</a>
+        </div>
+        <div class="section">
+            <a class="section-header" href="#step7">7. Log Out</a>
+        </div>
+        <div class="section">
+          <a class="section-header" href="#appendix">Appendix</a>
+        </div>
+      </div>
+    </div>
+    <div id="content">
+      <div id="content-container">
+        <h1>User Guide</h1>
+        <br>
+        <h2 id="step1">Step 1: Signing Up/Logging In</h2>
+          <div class="subsection-info">
+            <p>
+                If you don’t have an account, sign up by entering a username and password. The username must be a unique field. Should an existing username be entered, a prompt will appear to inform the user to select a different username. The password must also be between 8 - 16 characters long. If you have successfully created an account, you will be redirected to the Login page. 
+            </p>
+            <br>
+            <img src="assets/signup view.PNG" class="userguide" />
+            <br>
+            <p>
+                If you have an account already, sign in with your user credentials that were created when signing up.
+            </p>
+            <br>
+            <img src="assets/user login view.PNG" class="userguide" />
+            <br>
+            <p>
+                Should the wrong credentials be inputted, an error message will appear informing the user.
+            </p>
+          </div>
+          
+        <br></br>
+
+        <h2 id="step2">Step 2: View Your Theatres</h2>
+          <div class="subsection-info">
+            <p>
+                Once you sign in, you will be redirected to a page with all the Theatres that you are a part of. The names of the Theatres that you are in will appear on the left-hand side of the screen. 
+            </p>
+            <br>
+            <img src="assets/theatreView.png" class="userguide" />
+            <br>
+            <p>
+                If you are not in any theatres, you can click the Create Theatre button that will redirect you to the page where you can create one. Theatre names must be between 3 - 25 characters long. Clicking on a theatre box will direct you to the information relating to that theatre.
+            </p>
+            <br>
+            <img src="assets/theatre creation view.png" class="userguide" />
+            <br>
+            <p>
+                Once you have created or joined a theatre, you will be able to view details about a specific theatre by clicking on the theatre name. The list of watchers (users in your theatre) and the list of movie matches will appear. The movie matches contains a list of movies that all users in the theatre have liked.
+            </p>
+            <br>
+            <img src="assets/user theatre view.png" class="userguide" />
+            <br>
+            <br>
+        </div>
+
+        <br>
+    
+        <h2 id="step3">Step 3: Add Members to Your Theatre</h2>
+        <div class="subsection-info">
+        <p>
+            To add watchers in your theatre, click the Invite Watcher button on the previous Theatre page. You will be directed to the page below, where you can enter the EXACT username of the member you wish to add. 
+        </p>
+        <br>
+        <img src="assets/theatre invite view.png" class="userguide" />
+        <br>
+        <br>
+        <h3 id="step3-1">Step 3.1: Remove Members of Your Theatre</h3>
+        <div class="subsection-info">
+            <p>To remove members click the “Remove Watcher” button and input the EXACT username of a member of the theatre you wish to remove. An error message will appear should the user not exist within the theatre.</p>
+        </div>
+        <br>
+        <img src="assets/theatre remove watcher.png" class="userguide" />
+        <br>
+        <br>
+        <img src="assets/remove watcher.png" class="userguide" />
+        </div>
+        
+        <br>
+        <br>
+
+        <h2 id="step4">Step 4: View and Select Movies</h2>
+        <div class="subsection-info">
+        <p>
+            On the Movie Selection page is where you can “Flick” through movies, liking or disliking them. 
+            **Note: Users will only be able to begin clicking through movies after they have been added to at least one “Theatre”.
+            To go to the Movie Selection page, click the hamburger icon in the top left of the navigation bar, and then select “Flick”.
+        </p>
+        <br>
+        <img src="assets/flicknavbar.png" class="userguide" />
+        <br>
+        <br>
+        <p>On the Movie Selection page, you can now select the X button for movies you dislike or select the ✓ button for movies you want to watch.</p>
+        <br>
+        <img src="assets/user movie view.png" class="userguide" />
+        <br>
+        <br>
+        <p>Should there be no more movies available in our current database a prompt will be displayed instead informing users.</p>
+        <br>
+        <img src="assets/nomovies.png" class="userguide" />
+        </div>
+        
+        <br>
+        <br>
+
+        <h2 id="step5">Step 5: View User Profile and Notifications</h2>
+        <div class="subsection-info">
+        <p>
+            To go to your profile, click the hamburger menu in the top left and select “Profile”.
+        </p>
+        <br>
+        <img src="assets/gotoprofile.png" class="userguide" />
+        <br>
+        <p>
+            The user profile page is where you will be able to view your user information as well as any of your notifications that you have received. A user can choose to change their username by clicking on the Change Username button.
+        </p>
+        <br>
+        <img src="assets/user profile view.png" class="userguide" />
+        <br>
+        <p>
+            Additionally, when a new member is added to one of your theatres or you are invited to a theatre, you will receive a message on the User Profile page (as seen above). You can also delete all notifications by clicking on the Clear Notification button once you have read them. 
+        </p>
+        <br>
+        </div>
+
+        <br>
+
+        <h2 id="step6">Step 6: Additional Help</h2>
+        <div class="subsection-info">
+        <p>
+            If you encounter any problems while using the app, we have a Frequently Asked Questions page available to provide tips and guidance. 
+            <br>
+            To go to the FAQ page, click the hamburger menu in the top left and select “Help”.
+        </p>
+        <br>
+        <img src="assets/gotohelp.png" class="userguide" />
+        <br>
+        <br>
+        <img src="assets/faq.png" class="userguide" />
+        <br>
+        </div>
+
+        <br>
+        <br>
+
+        <h2 id="step7">Step 7: Log Out</h2>
+        <div class="subsection-info">
+        <p>
+            To sign out of Flick, navigate to the hamburger menu on the top left and click log out. Once done, you will be redirected back to the Login page.
+        </p>
+        <br>
+        <img src="assets/logout.png" class="userguide" />
+        <br>
+        </div>
+        
+        
+        <br></br>
+        <h1 id="appendix">Appendix</h1>
+        <div class="section-info">
+          <h2>Authored By</h2>
+          <div class="subsection-info subsubsection">
+            <p>08/08/2021 Version 1.0
+              <ul class="subsubsection">
+                <li>Amy Zhao</li>
+                <li>Cassidy Huang</li> 
+                <li>Connor Kanalec</li>
+                <li>Kara Kim</li>   
+                <li>Lavisha Bugreja</li>
+                <li>Scott Baker</li>   
+                <li>Ya Jun Shao</li>   
+              </ul>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

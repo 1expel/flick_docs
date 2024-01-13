@@ -1,0 +1,178 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: system-ui;
+  scroll-behavior: smooth;
+}
+
+#sidebar {
+  background-color: #f05e64;
+  position: fixed;
+  overflow-y: auto;
+  width: 15%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  transition: 0.2s;
+}
+
+#sidebar::-webkit-scrollbar {
+  display: none;
+}
+
+#content {
+  background-color: #f6f6f6;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 85%;
+  min-height: 100%;
+  transition: 0.2s;
+}
+
+#menu-button {
+  margin-left: 20px;
+  margin-top: 35px;
+  width: 30px;
+  height: 30px;
+  display: none;
+}
+
+@media only screen and (max-width: 1520px) {
+  #content {
+    width: 70%;
+  }
+  #sidebar {
+    width: 30%;
+  }
+  #menu-button {
+    display: block;
+  }
+}
+
+#content-container {
+  margin: 26px;
+}
+
+#sidebar-container {
+  margin: 26px;
+}
+
+#sidebar-container img {
+  width: 80%;
+}
+
+.section {
+  margin-bottom: 10px;
+}
+
+.section-header {
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #000000 !important;
+}
+
+.section-header:hover {
+  color: white !important;
+}
+
+.subsections {
+  margin-left: 20px;
+}
+
+.subsection-header {
+  font-size: 18px;
+  text-decoration: none;
+  color: #000000 !important;
+}
+
+.subsection-header:hover {
+  color: white !important;
+}
+
+.subsection-num {
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.subsections td {
+  vertical-align: top;
+}
+
+.section-info {
+  margin-left: 20px;
+}
+
+.subsection-info {
+  margin-left: 20px;
+  font-size: 20px;
+  margin-bottom: 10px;
+  max-width: 80%;
+}
+
+#content h1,
+h2,
+h3 {
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 21px;
+  margin-left: 15px;
+}
+
+.subsubsection {
+  margin-left: 30px;
+}
+
+.subsubsection img {
+  width: 50%;
+}
+
+.subsubsection ul {
+  font-size: 15px;
+}
+
+.content-table {
+  width: 100%;
+}
+
+.content-table th {
+  text-align: left;
+}
+
+.content-table table,
+.content-table th,
+.content-table td {
+  border: 1px solid #555;
+  border-collapse: collapse;
+}
+
+.content-table td,
+.content-table th {
+  padding: 5px;
+}
+
+.SQA-fixed {
+  background-color: #c1e3c2;
+}
+
+.SQA-dismissed {
+  background-color: #ffbfbf;
+}
+
+.SQA-tbd {
+  background-color: #fcf8bd;
+}
+
+.mockup {
+  width: 80%;
+  border: 5px solid #555;
+}
+
+.userguide {
+  width: 80%;
+  border: 2px solid #555;
+}

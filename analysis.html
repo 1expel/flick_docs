@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<!-- Test -->
+<html>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <head>
+    <title>Flick</title>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div id="sidebar">
+      <img
+        id="menu-button"
+        src="assets/hamburger-icon.svg"
+        onclick="changeMenu()"
+      />
+
+      <!-- Sidebar -->
+      <div id="sidebar-container">
+        <a href="https://flick-cp317.github.io/docs/index.html"><img src="assets/flick-logo.svg" alt="" /></a>
+
+        <!-- 1. Introduction -->
+        <div class="section">
+          <a class="section-header" href="#introduction">1. Introduction</a>
+        </div>
+
+        <!-- 2. Object Classifications -->
+        <div class="section">
+          <a class="section-header" href="#object-classification">2. Object Classification</a>
+        </div>
+
+        <!-- 3. Diagrams -->
+        <div class="section">
+          <a class="section-header" href="#diagrams">3. Diagrams</a>
+          <table class="subsections">
+            <tr>
+              <td><span class="subsection-num">3.1</span></td>
+              <td>
+                <a class="subsection-header" href="#boundary-diagrams">Boundary/Control/Entity Diagrams</a>
+              </td>
+            </tr>
+            <tr>
+                <td><span class="subsection-num">3.2</span></td>
+                <td>
+                  <a class="subsection-header" href="#state-diagrams">State Diagrams</a>
+                </td>
+              </tr>
+          </table>
+        </div>
+
+        <!-- 4. Data Dictionary -->
+        <div class="section">
+          <a class="section-header" href="#data-dictionary">4. Data Dictionary</a>
+        </div>
+
+        <!-- 5. Version History -->
+        <div class="section">
+          <a class="section-header" href="#version-history">5. Version History</a>
+        </div>
+
+        <!-- 6. SQA -->
+        <div class="section">
+          <a class="section-header" href="#sqa">6. SQA</a>
+        </div>
+
+        <!-- 6. SQA -->
+        <div class="section">
+            <a class="section-header" href="#document-changes">7. Document Changes</a>
+          </div>
+
+      </div>
+    </div>
+    <div id="content">
+      <div id="content-container">
+
+        <!-- 1. INTRODUCTION -->
+        <h1 id="introduction">1. Introduction</h1>
+        <div class="subsection-info">
+          <p>Flick is a web-based application that uses React to create a front-end. It will utilize a manually created database that is based on a catalogue of various movies. However, this model can later be extended to other streaming services. A back-end database will also be used to enable user preference and movie organization. </p>
+          <br>
+        </div>
+
+        <!-- 2. OBJECT CLASSIFICATION -->
+        <h1 id="object-classification">2. Object Classification</h1>
+        <div class="subsection-info">
+            <h3>Entity Objects</h3>
+            <ul class="subsubsection">
+                <li><a href="#user">User</a></li>
+                <li><a href="#movie">Movie</a></li>
+                <li><a href="#theatre">Theatre</a></li>
+                <li><a href="#record">Record</a></li>
+                <li><a href="#notification">Notification</a></li>
+            </ul>
+            <br>
+            <h3>Control Objects</h3>
+            <ul class="subsubsection">
+                <li><a href="#theatre-controller">TheatreController</a></li>
+                <li><a href="#user-controller">UserController</a></li>
+                <li><a href="#movie-controller">MovieDisplayController</a></li>
+                <li><a href="#user-notification-controller">UserNotificationController</a></li>
+                <li><a href="#record-update-controller">RecordUpdateController</a></li>
+                <li><a href="#authentication-controller">AuthenticationController</a></li>
+            </ul>
+            <br>
+            <h3>Boundary Objects</h3>
+            <ul class="subsubsection">
+                <li><a href="#user-login-view">UserLoginView</a></li>
+                <li><a href="#user-theatre-view">UserTheatreView</a></li>
+                <li><a href="#user-movie-view">UserMovieView</a></li>
+                <li><a href="#user-profile-view">UserProfileView</a></li>
+                <li><a href="#user-notification-view">UserNotificationView</a></li>
+                <li><a href="#theatre-creation-view">TheatreCreationView</a></li>
+                <li><a href="#theatre-invite-view">TheatreInviteView</a></li>
+                <li><a href="#theatre-remove-view">TheatreRemoveView</a></li>
+            </ul>
+            <br>
+        </div>
+
+        <!-- 3. DIAGRAMS -->
+        <h1 id="diagrams">3. Diagrams</h1>
+        <div class="section-info">
+          <h2 id="boundary-diagrams">3.1 Boundary/Control/Entity Diagram</h2>
+          <div class="subsection-info">
+              <h3>3.1.1 UML Legend</h3>
+              <img src="assets/UML Legend.PNG">
+
+              <h3>3.1.2 UML Diagram</h3>
+              <p></p>
+              <img src="assets/UML Diagram.PNG" class="umldiagram"> 
+
+          </div>
+
+          <h2 id="state-diagrams">3.2 State Diagrams</h2>
+
+          <div class="subsection-info">
+              
+              <h3>3.2.1 State Diagram Legend</h3>
+              <img src="assets/State Legend.PNG">
+
+              <h3>3.2.2 User Controller</h3>
+              <p>Controller for the User. Manages user actions and views. Interconnected with the action classes.</p>
+              <img src="assets/User Controller.PNG">
+              
+              <h3>3.2.3 Movie Display Controller</h3>
+              <p>Works to display movies for the user to interact with, uses the record table to record actions the user takes.</p>
+              <img src="assets/Movie Display Controller.PNG">
+
+              <h3>3.2.4 Record Update Controller</h3>
+              <p>Controller to record the user actions on a displayed movie.</p>
+              <img src="assets/Record Update Controller.PNG">
+
+              <h3>3.2.5 User Notification Controller</h3>
+              <p>Controller to display and remove notifications for a specific user.</p>
+              <img src="assets/User Notification Controller.PNG">
+
+              <h3>3.2.6 Theatre Display Controller</h3>
+              <p>Controller to handle actions related to theatres and transition between theatre states.</p>
+              <img src="assets/Theatre Display Controller.PNG">
+          </div>
+        </div>
+
+        <!-- 4. DATA DICTIONARY -->
+        <h1 id="data-dictionary">4. Data Dictionary</h1>
+        <div class="subsection-info">
+            <table class="content-table">
+                <tr>
+                    <th><b>Name</b></th>
+                    <th><b>Type</b></th>
+                    <th><b>Description</b></th>
+                </tr>
+                <tr>
+                    <td>Access Theatres</td>
+                    <td>Operation</td>
+                    <td>Displays all theatres a user is in</td>
+                </tr>
+                <tr>
+                    <td>Action</td>
+                    <td>boolean</td>
+                    <td>{record}
+                        boolean that specifies the type of action a user performed on a movie [Like = true, Dislike = false] (required)
+                        </td>
+                </tr>
+                <tr>
+                    <td id="authentication-controller">AuthenticationController</td>
+                    <td>Controller</td>
+                    <td>Controls the users' access to private pages</td>
+                </tr>
+                <tr>
+                    <td>Change Username</td>
+                    <td>Operation</td>
+                    <td>Allows user to choose a new (unique) username</td>
+                </tr>
+                <tr>
+                    <td>Clear Notification</td>
+                    <td>Operation</td>
+                    <td>Removes notification</td>
+                </tr>
+                <tr>
+                    <td>Create Theatre</td>
+                    <td>Operation</td>
+                    <td>Prompt user to enter the new theatre’s name</td>
+                </tr>
+                <tr>
+                    <td>Description</td>
+                    <td>varchar[256]</td>
+                    <td>{movie}
+                        Description of a specific movie
+                        </td>
+                </tr>
+                <tr>
+                    <td>Display Error: invalid username/password</td>
+                    <td>Operation</td>
+                    <td>Displays an error when the user enters an incorrect username/password combination</td>
+                </tr>
+                <tr>
+                    <td>Display Error: User not found</td>
+                    <td>Operation</td>
+                    <td>Displays an error when a specific user is not found when searching for their name</td>
+                </tr>
+                <tr>
+                    <td>Display Error: Username taken</td>
+                    <td>Operation</td>
+                    <td>Displays an error when the user enters a username that is already taken by another user</td>
+                </tr>
+                <tr>
+                    <td>Display Movie</td>
+                    <td>Operation</td>
+                    <td>Displays movies to the user</td>
+                </tr>
+                <tr>
+                    <td>genre</td>
+                    <td>Database Table</td>
+                    <td>A look-up table used to find the movies genre(s)</td>
+                </tr>
+                <tr>
+                    <td>genre</td>
+                    <td>smallint</td>
+                    <td>A smallint value that has a corresponding genre name tied to it. 0: "Action", 1: "Adventure", 2: "Comedy", 3: "Drama", 4: "Family", 5: "Fantasy", 6: "Horror", 7: "Romance"</td>
+                </tr>
+                <tr>
+                    <td>Invite Watchers</td>
+                    <td>Operation</td>
+                    <td>Prompt user to search for the user(s) they want to invite</td>
+                </tr>
+                <tr>
+                    <td>Leave Theatre</td>
+                    <td>Operation</td>
+                    <td>Allows user to leave a specific theatre</td>
+                </tr>
+                <tr>
+                    <td id="movie">Movie Display (Movie)</td>
+                    <td>Class (Entity Object)</td>
+                    <td>A movie that can be recommended to Flick users to swipe on</td>
+                </tr>
+                <tr>
+                    <td id="movie-controller">MovieDisplayController</td>
+                    <td>Controller</td>
+                    <td>Coordinates activities related to the recommendation of specific movies to users based on their preferences</td>
+                </tr>
+                <tr>
+                    <td>movieID</td>
+                    <td>uuid</td>
+                    <td>{movie}
+                        Movie ID meant for internal use (required, unique)
+                        </td>
+                </tr>
+                <tr>
+                    <td>movie</td>
+                    <td>Database Table</td>
+                    <td>A movie that can be recommended to Flick users to swipe on</td>
+                </tr>
+                <tr>
+                    <td id="notification">Notification</td>
+                    <td>Class (Entity Object)</td>
+                    <td>A notification that is delivered to users
+                        </td>
+                </tr>
+                <tr>
+                    <td>notificationID</td>
+                    <td>uuid</td>
+                    <td>{notification}
+                        Notification ID meant for internal use (required, unique)
+                        </td>
+                </tr>
+                <tr>
+                    <td>notification</td>
+                    <td>Database Table</td>
+                    <td>All notifications received by users will be stored in this table</td>
+                </tr>
+                <tr>
+                    <td>NotificationType</td>
+                    <td>smallint</td>
+                    <td>{notification}
+                        The type of a notification [TheatreInvite/NewMember] (required)
+                        </td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td>varchar[256]</td>
+                    <td>{users}
+                        A user’s password, used for logging in (required)
+                        </td>
+                </tr>
+                <tr>
+                    <td>Prompt New account Sign-up</td>
+                    <td>Operation</td>
+                    <td>Prompts user to enter username and password</td>
+                </tr>
+                <tr>
+                    <td>Prompt User to Swipe (L/R)</td>
+                    <td>Operation</td>
+                    <td>Display the option for the user to swipe on a movie</td>
+                </tr>
+                <tr>
+                    <td>Rating</td>
+                    <td>real</td>
+                    <td>{user_preferences}
+                        A rating that corresponds to a user’s preference of a specific genre (required)
+                        </td>
+                </tr>
+                <tr>
+                    <td>Record Swipe Action in Table</td>
+                    <td>Operation</td>
+                    <td>Record user’s swipe for the movie display</td>
+                </tr>
+                <tr>
+                    <td id="record">Record Update (Record)</td>
+                    <td>Class (Entity Object)</td>
+                    <td>Movie records that were viewed by the user and records choice based on swiped</td>
+                </tr>
+                <tr>
+                    <td>record</td>
+                    <td>Database Table</td>
+                    <td>Each movie swiped by the Flick users will be stored in this table</td>
+                </tr>
+                <tr>
+                    <td id="record-update-controller">RecordUpdateController</td>
+                    <td>Controller</td>
+                    <td>Coordinates activities required to update a list of movie records along with updating genre preferences</td>
+                </tr>
+                <tr>
+                    <td>Show Notification</td>
+                    <td>Operation</td>
+                    <td>Displays notification</td>
+                </tr>
+                <tr>
+                    <td>SignUpView</td>
+                    <td>Boundary Object</td>
+                    <td>Coordinates activities related to the recommendation of specific movies to users based on their preferences</td>
+                </tr>
+                <tr>
+                    <td id="theatre">Theatre</td>
+                    <td>Class (Entity Object)</td>
+                    <td>A customizable group of users to share movie matches</td>
+                </tr>
+                <tr>
+                    <td>theatre_user</td>
+                    <td>Database Table</td>
+                    <td>Lookup table that stores every user and the corresponding theatres they are a part of</td>
+                </tr>
+                <tr>
+                    <td id="theatre-controller">TheatreController</td>
+                    <td>Controller</td>
+                    <td>Coordinates theatre matches, watcher lists, invites, and manages the theatres watcher lists</td>
+                </tr>
+                <tr>
+                    <td id="theatre-creation-view">TheatreCreationView</td>
+                    <td>Boundary Object</td>
+                    <td>The interface that handles theatre creation</td>
+                </tr>
+                <tr>
+                    <td>Theatreid</td>
+                    <td>uuid</td>
+                    <td>{theatre}
+                        Theatre ID meant for internal use (required, unique)
+                        </td>
+                </tr>
+                <tr>
+                    <td id="theatre-invite-view">TheatreInviteView</td>
+                    <td>Boundary Object</td>
+                    <td>The interface that handles theatre invites, including searching for new watchers to add</td>
+                </tr>
+                
+                <tr>
+                    <td>theatreName</td>
+                    <td>String</td>
+                    <td>{theatre}
+                        Theatre name that is visible by users (required)
+                        </td>
+                </tr>
+                <tr>
+                    <td id="theatre-remove-view">TheatreRemoveView</td>
+                    <td>Boundary Object</td>
+                    <td>The interface that handles removing watchers from theatres</td>
+                </tr>
+                <tr>
+                    <td>theatre</td>
+                    <td>Database Table</td>
+                    <td>Each theatre and its characteristics will be stored in this table
+                    </td>
+                </tr>
+                <tr>
+                    <td>timestamp</td>
+                    <td>Date</td>
+                    <td>{record}
+                        Time in which a user performed an action on a movie (required)
+                        </td>
+                </tr>
+                <tr>
+                    <td>title</td>
+                    <td>String</td>
+                    <td>{movie}
+                        Name of movie, contained within Movie database table
+                        </td>
+                </tr>
+                <tr>
+                    <td>Update User Preferences</td>
+                    <td>Operation</td>
+                    <td>Update user’s genre preferences based on their action (swipe)</td>
+                </tr>
+                <tr>
+                    <td id="user">User</td>
+                    <td>Entity Object</td>
+                    <td>A user of Flick</td>
+                </tr>
+                <tr>
+                    <td>User Notification (Notification)</td>
+                    <td>Class (Entity Object)</td>
+                    <td>Informs users of various events (theatre invites and new watcher)</td>
+                </tr>
+                <tr>
+                    <td>user_preferences</td>
+                    <td>Database Table</td>
+                    <td>Look-up table that stores a user’s genre preferences</td>
+                </tr>
+                <tr>
+                    <td id="user-controller">UserController</td>
+                    <td>Controller</td>
+                    <td>Coordinates modifications to user profiles and validates user information</td>
+                </tr>
+                <tr>
+                    <td>userid</td>
+                    <td>uuid</td>
+                    <td>{users}
+                        User ID meant for internal use (required, unique)
+                        </td>
+                </tr>
+                <tr>
+                    <td id="user-login-view">UserLoginView</td>
+                    <td>Boundary Object</td>
+                    <td>The interface that allows users to log in from</td>
+                </tr>
+                <tr>
+                    <td id="user-movie-view">UserMovieView</td>
+                    <td>Boundary Object</td>
+                    <td>The interface that displays movies for the user to swipe on</td>
+                </tr>
+                <tr>
+                    <td>username</td>
+                    <td>varchar[50]</td>
+                    <td>{users}
+                        Customizable username meant to represent a user (required, unique)
+                        </td>
+                </tr>
+                <tr>
+                    <td id="user-notification-controller">UserNotificationController</td>
+                    <td>Controller</td>
+                    <td>Coordinates sending event notifications to users</td>
+                </tr>
+                <tr>
+                    <td id="user-notification-view">UserNotificationView</td>
+                    <td>Boundary Object</td>
+                    <td>The interface that shows a user their notifications</td>
+                </tr>
+                <tr>
+                    <td id="user-profile-view">UserProfileView</td>
+                    <td>Boundary Object</td>
+                    <td>The interface that allows user to view and edit their current profile preferences</td>
+                </tr>
+                <tr>
+                    <td>users</td>
+                    <td>Database Table</td>
+                    <td>Users of Flick will be stored in this table</td>
+                </tr>
+                <tr>
+                    <td id="user-theatre-view">UserTheatreView</td>
+                    <td>Boundary Object</td>
+                    <td>The interface that allows users to see the theatres they are in, choose recommended movie to watch and view the watchers in their theatre or remove current members from the theatre</td>
+                </tr>
+                <tr>
+                    <td>Validate Login Information</td>
+                    <td>Operation</td>
+                    <td>Validates the username and password entered</td>
+                </tr>
+                <tr>
+                    <td>View Matches</td>
+                    <td>Operation</td>
+                    <td>Displays movies that the users matched on</td>
+                </tr>
+                <tr>
+                    <td>View Profile</td>
+                    <td>Operation</td>
+                    <td>Displays the users’ profile</td>
+                </tr>
+                <tr>
+                    <td>View Theatre</td>
+                    <td>Operation</td>
+                    <td>Displays selected theatre</td>
+                </tr>
+                <tr>
+                    <td>View Watchers</td>
+                    <td>Operation</td>
+                    <td>Displays a list of users in that theatre</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- 5. VERSION HISTORY -->
+        <h1 id="version-history">5. Version History</h1>
+        <div class="subsection-info">
+            <h2>Version 0.1</h2>
+            <h3>6/15/2021 Initial Draft</h3>
+            <ul class="subsubsection">
+                <li>Alexander Dimitrakoudis</li>
+                <li>Amy Zhao</li>
+                <li>Cassidy Huang</li>
+                <li>Connor Kanalec</li>
+                <li>Lavisha Bugreja</li>
+                <li>Matthew Dibble</li>
+                <li>Mustafa Raza</li>
+                <li>Scott Baker</li>
+            </ul>
+            <br>
+            <h2>Version 0.2</h2>
+            <h3>6/19/2021 UML Initial Draft</h3>
+            <ul class="subsubsection">
+                <li>Amy Zhao</li>
+                <li>Cassidy Huang</li>
+                <li>Lavisha Bugreja</li>
+            </ul>
+            <br>
+            <h2>Version 0.3</h2>
+            <h3>6/21/2021 Included UML/Controller Diagrams</h3>
+            <ul class="subsubsection">
+                <li>Alexander Dimitrakoudis</li>
+                <li>Amy Zhao</li>
+                <li>Cassidy Huang</li>
+                <li>Connor Kanalec</li>
+                <li>Lavisha Bugreja</li>
+                <li>Matthew Dibble</li>
+                <li>Mustafa Raza</li>
+                <li>Scott Baker</li>
+            </ul>
+            <br>
+            <h2>Version 0.4</h2>
+            <h3>6/23/2021 Edits to the UML/Controller Diagrams</h3>
+            <ul class="subsubsection">
+                <li>Alexander Dimitrakoudis</li>
+                <li>Amy Zhao</li>
+                <li>Cassidy Huang</li>
+                <li>Connor Kanalec</li>
+                <li>Lavisha Bugreja</li>
+                <li>Matthew Dibble</li>
+                <li>Mustafa Raza</li>
+                <li>Scott Baker</li>
+            </ul>
+            <br>
+            <h2>Version 0.5</h2>
+            <h3>7/1/2021 Refactors of core interactions</h3>
+            <ul class="subsubsection">
+                <li>Amy Zhao</li>
+                <li>Cassidy Huang</li>
+                <li>Connor Kanalec</li>
+                <li>Lavisha Bugreja</li>
+                <li>Matthew Dibble</li>
+            </ul>
+            <br>
+            <h3>7/01/2021 [HTML] Initial Draft</h3>
+            <ul class="subsubsection">
+                <li>Andrew Maxwell</li>
+                <li>Kara Kim</li>
+            </ul>
+            <br>
+            <h2>Version 0.6</h2>
+            <h3>8/02/2021 Final Back-End Revisions</h3>
+            <ul class="subsubsection">
+                <li>Kara Kim</li>
+                <li>Matthew Dibble</li>
+                <li>Michael Veloso</li>
+                <li>Scott Baker</li>
+            </ul>
+            <h2>Version 0.7</h2>
+            <h3>8/07/2021 Front-End Adjustment to Match Implementation</h3>
+            <ul class="subsubsection">
+                <li>Amy Zhao</li>
+                <li>Andrew Maxwell</li>
+                <li>Cassidy Huang</li>
+                <li>Lavisha Bugreja</li>
+                <li>Tharssan Srikanthan</li>
+                <li>Ya Jun Shao</li>
+            </ul>
+        </div>
+        <br>
+
+
+        <!-- 6. SQA -->
+        <h1 id="sqa">6. SQA</h1>
+        <div class="subsection-info">
+            <table class="content-table">
+                <tr>
+                    <th><b>No.</b></th>
+                    <th><b>Author</b></th>
+                    <th><b>v. In</b></th>
+                    <th><b>Description</b></th>
+                    <th><b>Status</b></th>
+                    <th><b>Explanation</b></th>
+                    <th><b>Verified By</b></th>
+                    <th><b>v. Out</b></th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Ya Jun Shao</td>
+                    <td>v0.4</td>
+                    <td>Object Classification - Entity Objects: some names are pluralized, but refer to singular objects, while others aren’t. To keep it consistent, we should remove the pluralization</td>
+                    <td class="SQA-fixed">Fixed</td>
+                    <td></td>
+                    <td>Rough-draft team</td>
+                    <td>v0.5</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Ya Jun Shao</td>
+                    <td>v0.4</td>
+                    <td>Object Classification - Control Objects: “the recommending specific movies” should be “the <b><u>recommendation of </b></u>specific movies”</td>
+                    <td class="SQA-fixed">Fixed</td>
+                    <td></td>
+                    <td>Rough-draft team</td>
+                    <td>v0.5</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Ya Jun Shao</td>
+                    <td>v0.4</td>
+                    <td>Object Classification - Control Objects: “update a the list of movie records” should be “update a <b><s>the</s></b> list of movie records”</td>
+                    <td class="SQA-fixed">Fixed</td>
+                    <td></td>
+                    <td>Rough-draft team</td>
+                    <td>v0.5</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Ya Jun Shao</td>
+                    <td>v0.4</td>
+                    <td>Object Classification - Boundary Objects: “allow users to log from” should be “allow<b><u>s</u></b> users to log <b><u>in</u></b> from”</td>
+                    <td class="SQA-fixed">Fixed</td>
+                    <td></td>
+                    <td>Rough-draft team</td>
+                    <td>v0.5</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Ya Jun Shao</td>
+                    <td>v0.4</td>
+                    <td>Object Classification - Boundary Objects: “allow user can see” should be “allow<b><u>s</u></b> user <b><u>to</u></b> see” (list is also missing some commas)</td>
+                    <td class="SQA-fixed">Fixed</td>
+                    <td></td>
+                    <td>Rough-draft team</td>
+                    <td>v0.5</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Ya Jun Shao</td>
+                    <td>v0.4</td>
+                    <td>Databases & Their Fields: some database names are pluralized in description, but not in UML (e.g., “Users”, “Movies”)</td>
+                    <td class="SQA-fixed">Fixed</td>
+                    <td></td>
+                    <td>Rough-draft team</td>
+                    <td>v0.5</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Ya Jun Shao</td>
+                    <td>v0.4</td>
+                    <td>Databases & Their Fields: should we include a “Rating” field in “Movies”?</td>
+                    <td class="SQA-dismissed">Dismissed</td>
+                    <td>Could potentially be added in later</td>
+                    <td>Rough-draft team</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Ya Jun Shao</td>
+                    <td>v0.4</td>
+                    <td>Databases & Their Fields - UML: “Pref” field in “User” is missing data type (also “Pref” is called “prefs” in the description)</td>
+                    <td class="SQA-fixed">Fixed</td>
+                    <td>Created separate lookup table</td>
+                    <td>Rough-draft team</td>
+                    <td>v0.5</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Ya Jun Shao</td>
+                    <td>v0.4</td>
+                    <td>Databases & Their Fields: Remove extra “name” from “theatreNamename” </td>
+                    <td class="SQA-fixed">Fixed</td>
+                    <td></td>
+                    <td>Rough-draft team</td>
+                    <td>v0.5</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Ya Jun Shao</td>
+                    <td>v0.4</td>
+                    <td>Databases & Their Fields: where will the actual content of the notification be stored (i.e., the templates for the text to be displayed)? Should we create a separate table for it or will it be hardcoded in the back-end?</td>
+                    <td class="SQA-dismissed">Dismissed</td>
+                    <td>The notification types are stored in the database and the text templates are hard coded into the backend.</td>
+                    <td>Rough-draft team</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>Ya Jun Shao</td>
+                    <td>v0.4</td>
+                    <td>Databases & Their Fields: in the SRS doc, we mentioned having notifications for new Theatre Matches -- should we implement this or remove it from the SRS?</td>
+                    <td class="SQA-tbd">Pending</td>
+                    <td>Will be removed from previous documentation (SRS)</td>
+                    <td>Rough-draft team</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>Ya Jun Shao</td>
+                    <td>v0.4</td>
+                    <td>Databases & Their Fields - UML: “Notifications” contains a multivalued key (“notifiedUser”). Note that “theatreId” is referenced twice (in the key and as a separate field) -- should we remove this redundancy? Additionally, data type for “notifiedUser” is different from description</td>
+                    <td class="SQA-fixed">Fixed</td>
+                    <td></td>
+                    <td>Rough-draft team</td>
+                    <td>v0.5</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>Ya Jun Shao</td>
+                    <td>v0.4</td>
+                    <td>Movie Display Controller: “Catalogue” should be changed to “Record” to maintain consistency</td>
+                    <td class="SQA-fixed">Fixed</td>
+                    <td></td>
+                    <td>Rough-draft team</td>
+                    <td>v0.5</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>Tharssan Srikanthan</td>
+                    <td>v0.4</td>
+                    <td>Boundary Objects: 
+                        Bullet point 2&7 
+                        Should we be using the term “Watchers” we haven’t defined that term in any of the documents
+                        (I’ve noticed we used that term a lot. Is there some place we have to define it?)
+                        </td>
+                    <td class="SQA-tbd">Pending</td>
+                    <td>To be added to SRS (1.3.2)</td>
+                    <td>Rough-draft team</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>Ya Jun Shao</td>
+                    <td>v0.4</td>
+                    <td>Should we change the heading “Databases & Their Fields” to “Classes”?</td>
+                    <td class="SQA-dismissed">Dismissed</td>
+                    <td>Distinction made between database tables and class tables</td>
+                    <td>Rough-draft team</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td>Michael Veloso</td>
+                    <td>v0.4</td>
+                    <td>Object Classification, Entity Objects: Should we list all the possible notifications? There is info in the SRS (2.1.1) we can link to, to show all the notification options.</td>
+                    <td class="SQA-fixed">Fixed</td>
+                    <td></td>
+                    <td>Rough-draft team</td>
+                    <td>v0.5</td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td>Ya Jun Shao</td>
+                    <td>v0.4</td>
+                    <td>The controller event loops need a main section heading -- suggestion: use similar headings as <a href="http://partyall-docs.herokuapp.com/docs/partyall-analysis.html">PartyAll</a> (e.g., Diagrams -> State Diagrams - > User Controller)</td>
+                    <td class="SQA-fixed">Fixed</td>
+                    <td></td>
+                    <td>Rough-draft team</td>
+                    <td>v0.5</td>
+                </tr>
+                <tr>
+                    <td>18</td>
+                    <td>Michael Veloso</td>
+                    <td>v0.4</td>
+                    <td>Object Classification, Boundary Objects, UserProfileView: “edit their current profile preferences and usernames”, the user can have multiple usernames? I suggest taking out the “and usernames”, I think “profile preferences” covers it all.</td>
+                    <td class="SQA-fixed">Fixed</td>
+                    <td></td>
+                    <td>Rough-draft team</td>
+                    <td>v0.5</td>
+                </tr>
+                <tr>
+                    <td>19</td>
+                    <td>Michael Veloso</td>
+                    <td>v0.4</td>
+                    <td>Databases & Their Fields, Users: Would the reader know what is “prefs: float[] (required)”? Should we name it “genreprefs”?</td>
+                    <td class="SQA-fixed">Fixed</td>
+                    <td>Changed to a look-up table</td>
+                    <td>Rough-draft team</td>
+                    <td>v0.5</td>
+                </tr>
+                <tr>
+                    <td>20</td>
+                    <td>Michael Veloso</td>
+                    <td>v0.4</td>
+                    <td>Databases & Their Fields, Movies: Are we putting in the movie posters? If so, have we thought about how we are going to do it?</td>
+                    <td class="SQA-dismissed">Dismissed</td>
+                    <td>Exploring storage options outside of database</td>
+                    <td>Rough-draft team</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>21</td>
+                    <td>Michael Veloso</td>
+                    <td>v0.4</td>
+                    <td>Regarding the UML, specifically the notifications to the theatre_user: I can see how this makes sense if the notification is a new member joining a theatre, but I'm struggling to understand how a notification inviting a user works. Wouldn't a theatre invite go to user rather than a theatre_user?</td>
+                    <td class="SQA-dismissed">Dismissed</td>
+                    <td>Need to be connected to the look-up table.</td>
+                    <td>Rough-draft team</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>22</td>
+                    <td>Michael Veloso</td>
+                    <td>v0.4</td>
+                    <td>Databases & Their Fields, Records: Do we need the variables “genre 1” and genre 2” in the record? The record does have the “movieid”, so if the genre info was needed, we could use the “movieid” key to pull it.</td>
+                    <td class="SQA-fixed">Fixed</td>
+                    <td></td>
+                    <td>Rough-draft team</td>
+                    <td>v0.5</td>
+                </tr>
+                <tr>
+                    <td>23</td>
+                    <td>Michael Veloso</td>
+                    <td>v0.4</td>
+                    <td>Databases & Their Fields, Notifications: Do we need a variable to hold the “userid” or “username” of the person that joined the theatre?</td>
+                    <td class="SQA-dismissed">Dismissed</td>
+                    <td>Won’t specify exact user that joined the theatre</td>
+                    <td>Rough-draft team</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>24</td>
+                    <td>Tharssan Srikanthan</td>
+                    <td>v0.4</td>
+                    <td>Databases & Their Fields:
+                        “Theatre_Users: Lookup table that stores every user and the corresponding theatre <b><u>ID</u></b> they are a part of<b><u>.</u></b>”</td>
+                    <td class="SQA-fixed">Fixed</td>
+                    <td></td>
+                    <td>Rough-draft team</td>
+                    <td>v0.5</td>
+                </tr>
+                <tr>
+                    <td>25</td>
+                    <td>Tharssan Srikanthan</td>
+                    <td>v0.4</td>
+                    <td>Theatre Displays Controller: Shouldn’t you be able to “invite watchers” after you “create a theatre”? </td>
+                    <td class="SQA-dismissed">Dismissed</td>
+                    <td></td>
+                    <td>Rough-draft team</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>26</td>
+                    <td>Michael Veloso</td>
+                    <td>v0.4</td>
+                    <td>User Notification Controller: does the member joining notification get cleared once viewed and the theatre invite notification only gets cleared when a decision is made?</td>
+                    <td class="SQA-fixed">Fixed</td>
+                    <td>We will allow users to delete notifications.</td>
+                    <td>Rough-draft team</td>
+                    <td>v0.5</td>
+                </tr>
+                <tr>
+                    <td>27</td>
+                    <td>Tharssan Srikanthan</td>
+                    <td>v0.4</td>
+                    <td>User Notification Controller: Are all notifications going to have an acceptance decision? </td>
+                    <td class="SQA-fixed">Fixed</td>
+                    <td>Removed acceptance decision - notifications can only be viewed/deleted</td>
+                    <td>Rough-draft team</td>
+                    <td>v0.5</td>
+                </tr>
+                <tr>
+                    <td>28</td>
+                    <td>Michael Veloso</td>
+                    <td>v0.4</td>
+                    <td>Theatre Display Controller: What happens after a valid invite is made? Do we send them back to the view theatre screen or the view members screen?</td>
+                    <td class="SQA-dismissed">Dismissed</td>
+                    <td>Implied that users can move between screens</td>
+                    <td>Rough-draft team</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>29</td>
+                    <td>Tharssan Srikanthan</td>
+                    <td>v0.4</td>
+                    <td>Objection Classification 
+                        Theatres: A customizable group of <b>of</b> (repeated word) users to share movie matches</td>
+                    <td class="SQA-fixed">Fixed</td>
+                    <td></td>
+                    <td>Rough-draft team</td>
+                    <td>v0.5</td>
+                </tr>
+            </table>
+        </div>
+        
+        <!-- 7. Document Changes -->
+        <h1 id="document-changes">7. Document Changes</h1>
+        <div class="subsection-info">
+            <p><span style="text-decoration: underline;"><strong>Analysis:</strong></span></p>
+            <ul>
+            <li>2. Object Classification - added AuthenticationController to Control Objects and TheatreRemoveView to Boundary Objects</li>
+            <li>3. Diagrams - added new objects to 3.1 and updated Remove Watcher action in 3.2.6</li>
+            <li>4. Data Dictionary - added definitions for new objects</li>
+            </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
